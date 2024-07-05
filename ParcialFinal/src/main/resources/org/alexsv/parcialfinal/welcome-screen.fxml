@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="97.0" prefWidth="800.0" style="-fx-background-color: #305684;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Desktop/UCA/Trabajos%20ciclo%2003/POO/Parcial%20final/ParcialFinal_POO/ParcialFinal/src/main/resources/img/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="81.0" prefWidth="800.0">
+               <children>
+                  <Label text="Welcome Back User!">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Select one option:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="311.0" prefWidth="800.0">
+               <children>
+                  <HBox prefHeight="311.0" prefWidth="800.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="311.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Purchases made" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="311.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Total expeditures" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="311.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Associated cards" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="311.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Purchases with" />
+                              <Label text="card facilitator" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
