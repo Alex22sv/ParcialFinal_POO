@@ -76,9 +76,9 @@
                         <Button fx:id="searchMoneySpentButtom" mnemonicParsing="false" text="Search" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="145.0" prefWidth="800.0">
+                  <HBox alignment="CENTER" prefHeight="182.0" prefWidth="800.0">
                      <children>
-                        <TableView fx:id="MoneySpentTable" prefHeight="131.0" prefWidth="600.0">
+                        <TableView fx:id="MoneySpentTable" prefHeight="177.0" prefWidth="600.0">
                           <columns>
                             <TableColumn fx:id="clientsNameFromMoneySpentTableColumn" prefWidth="200.0" text="Client's name" />
                             <TableColumn fx:id="numPurchasesFromMoneySpentTableColumn" prefWidth="200.0" text="N° Purchases" />
