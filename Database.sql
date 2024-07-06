@@ -17,7 +17,7 @@ CREATE TABLE Card(
     type VARCHAR(20),
     facilitator VARCHAR(20),
     clientId INT,
-    CONSTRAINT FK_client_card FOREIGN KEY (clientId) REFERENCES Client(clientId)
+    CONSTRAINT FK_client_card FOREIGN KEY (clientId) REFERENCES Client(clientId) ON DELETE CASCADE
 );
 -- Create Transaction table
 CREATE TABLE Transaction(
@@ -27,8 +27,8 @@ CREATE TABLE Transaction(
     description VARCHAR(50) NOT NULL,
     clientId INT,
     cardId INT,
-    CONSTRAINT FK_client_transaction FOREIGN KEY (clientId) REFERENCES Client(clientId),
-    CONSTRAINT FK_card_transaction FOREIGN KEY (cardId) REFERENCES Card(cardID)
+    CONSTRAINT FK_client_transaction FOREIGN KEY (clientId) REFERENCES Client(clientId) ON DELETE CASCADE,
+    CONSTRAINT FK_card_transaction FOREIGN KEY (cardId) REFERENCES Card(cardID) ON DELETE CASCADE
 );
 -- Insert clients
 INSERT INTO Client (`name`, `address`, `phoneNumber`) VALUES ('Alexander Efraín Morales Pineda', 'San Salvador Centro, Mejicanos', '1234-5678'), 
