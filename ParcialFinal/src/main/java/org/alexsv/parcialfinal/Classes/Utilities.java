@@ -31,4 +31,16 @@ public class Utilities {
         writer.write(data);//00041923 write in file the data variable value
         writer.close(); //00041923 close the writer
     }
+    public static String censorCardNumber(String cardNumber){
+        String censoredCardNumber = "";
+        cardNumber = cardNumber.replace(" ", "");
+        cardNumber = cardNumber.replace("-", "");
+        censoredCardNumber = "XXXX XXXX XXXX " + cardNumber.substring(12);
+        return censoredCardNumber;
+    }
+    public static String fixCardNumberFormat(String cardNumber){
+        String fixedCardNumber = "";
+        fixedCardNumber = cardNumber.replace("-", " ");
+        return fixedCardNumber;
+    }
 }
