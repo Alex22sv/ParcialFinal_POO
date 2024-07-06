@@ -15,7 +15,9 @@ CREATE TABLE Card(
     cardNumber VARCHAR(19) NOT NULL,
     expirationDate Date NOT NULL,
     type VARCHAR(10),
-    facilitator VARCHAR(20)
+    facilitator VARCHAR(20),
+    clientId int,
+    CONSTRAINT FK_client_card FOREIGN KEY (clientId) REFERENCES Client(clientId)
 );
 ALTER TABLE Card 
 -- Forgot to add clientId column in Card table
