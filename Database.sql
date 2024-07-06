@@ -39,5 +39,5 @@ INSERT INTO Card(`cardNumber`, `expirationDate`, `type`, `facilitator`, `clientI
 ('0023 7812 9822 9876', '2026-09-01', 'Credit card', 'Visa', 2), ('0097 5101 7421 4321', '2030-02-01', 'Debit card', 'MasterCard', 1),
 ('9863 3201 9871 0131', '2026-12-01', 'Debit card', 'Visa', 3), ('0231 9630 1234 6534', '2025-07-01', 'Debit card', 'American', 1);
 -- Insert transactions
-INSERT INTO Transaction(`purchaseDate`, `totalAmount`, `description`, `clientId`, `cardId`) VALUES ('2024-07-05', 9.99, 'Caja de donas', 1, 11),
-('2024-06-23', 4.99, 'Café americano', 2, 12), ('2024-07-01', 20.99, 'Par de zapatos', 3, 14);
+INSERT INTO Transaction(`purchaseDate`, `totalAmount`, `description`, `clientId`, `cardId`) VALUES ('2024-07-05', 9.99, 'Caja de donas', 2, 2),
+('2024-06-23', 4.99, 'Café americano', 2, 4), ('2024-07-01', 20.99, 'Par de zapatos', 4, 2);
