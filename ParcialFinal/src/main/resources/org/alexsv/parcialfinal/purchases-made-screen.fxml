@@ -54,36 +54,36 @@
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
                            <children>
                               <Label text="Client's ID" />
-                              <TextField maxWidth="150.0" promptText="ID here" />
+                              <TextField fx:id="clientIDPurschasesTextField" maxWidth="150.0" promptText="ID here" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
                            <children>
                               <Label text="Start date" />
-                              <DatePicker />
+                              <DatePicker fx:id="startDatePurchasesDatePicker" promptText="First date here" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
                            <children>
                               <Label text="End date" />
-                              <DatePicker />
+                              <DatePicker fx:id="endDatePurchasesDatePicker" promptText="Last date here" />
                            </children>
                         </VBox>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="33.0" prefWidth="800.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Search" />
+                        <Button fx:id="searchPurchasesMadeButtom" mnemonicParsing="false" text="Search" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="182.0" prefWidth="800.0">
                      <children>
-                        <TableView prefHeight="182.0" prefWidth="765.0">
+                        <TableView fx:id="purchasesMadeTable" prefHeight="182.0" prefWidth="765.0">
                           <columns>
-                            <TableColumn prefWidth="109.3333410024643" text="Purchase date" />
-                            <TableColumn prefWidth="134.66667938232422" text="Total amount" />
-                              <TableColumn prefWidth="303.99998474121094" text="Description" />
-                              <TableColumn minWidth="0.0" prefWidth="215.99993896484375" text="Electronic card" />
+                            <TableColumn fx:id="purchaseDateFromPurchaseTableColumn" prefWidth="109.3333410024643" text="Purchase date" />
+                            <TableColumn fx:id="totalAmountFromPurchaseTableColumn" prefWidth="134.66667938232422" text="Total amount" />
+                              <TableColumn fx:id="DescriptionFromPurchaseTableColumn" prefWidth="303.99998474121094" text="Description" />
+                              <TableColumn fx:id="electronicCardFromPurchaseTableColumn" minWidth="0.0" prefWidth="215.99993896484375" text="Electronic card" />
                           </columns>
                            <HBox.margin>
                               <Insets top="5.0" />
