@@ -31,16 +31,14 @@ public class Utilities {
         writer.write(data);//00041923 write in file the data variable value
         writer.close(); //00041923 close the writer
     }
-    public static String censorCardNumber(String cardNumber){
-        String censoredCardNumber = "";
-        cardNumber = cardNumber.replace(" ", "");
-        cardNumber = cardNumber.replace("-", "");
-        censoredCardNumber = "XXXX XXXX XXXX " + cardNumber.substring(12);
-        return censoredCardNumber;
+    public static String censorCardNumber(String cardNumber){ // 00024123 this method censors the first 12 numbers and only displays the last 4
+        cardNumber = cardNumber.replace(" ", ""); // 00024123 remove the spaces in the card number
+        cardNumber = cardNumber.replace("-", ""); // 00024123 remove the hyphens in the card number
+        String censoredCardNumber = "XXXX XXXX XXXX " + cardNumber.substring(12); // 00024123 remove the first 12 numbers of the card and replace them with X
+        return censoredCardNumber; // 00024123 return the censored card number
     }
-    public static String fixCardNumberFormat(String cardNumber){
-        String fixedCardNumber = "";
-        fixedCardNumber = cardNumber.replace("-", " ");
-        return fixedCardNumber;
+    public static String fixCardNumberFormat(String cardNumber){ //00024123 this method fixes the card number format (when the user separates the numbers with hyphens)
+        String fixedCardNumber = cardNumber.replace("-", " "); // 00024123 replace the hyphens with spaces in the credit card number
+        return fixedCardNumber; // 00024123 return the fixed credit card number
     }
 }
