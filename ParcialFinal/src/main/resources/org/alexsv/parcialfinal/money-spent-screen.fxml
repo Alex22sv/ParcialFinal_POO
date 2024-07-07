@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ReportBController">
     <children>
         <VBox prefHeight="500.0" prefWidth="800.0">
             <children>
@@ -128,20 +135,20 @@
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
                            <children>
                               <Label text="Month" />
-                              <ChoiceBox fx:id="monthMoneySpentChoiceBox" prefWidth="150.0" />
+                              <TextField fx:id="monthChoice" maxWidth="-Infinity" prefHeight="24.0" prefWidth="196.0" promptText="The number of the month" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
                            <children>
                               <Label text="Year" />
-                              <ChoiceBox fx:id="yearMoneySpentChoiceBox" prefWidth="150.0" />
+                              <TextField fx:id="yearChoice" maxWidth="-Infinity" prefHeight="24.0" prefWidth="161.0" promptText="Year" />
                            </children>
                         </VBox>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="33.0" prefWidth="800.0">
                      <children>
-                        <Button fx:id="searchMoneySpentButtom" mnemonicParsing="false" text="Search" />
+                        <Button fx:id="searchMoneySpentButtom" mnemonicParsing="false" text="Search" onAction="#reportB"/>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="145.0" prefWidth="800.0">
@@ -149,7 +156,6 @@
                         <TableView fx:id="MoneySpentTable" prefHeight="131.0" prefWidth="600.0">
                           <columns>
                             <TableColumn fx:id="clientsNameFromMoneySpentTableColumn" prefWidth="200.0" text="Client's name" />
-                            <TableColumn fx:id="numPurchasesFromMoneySpentTableColumn" prefWidth="200.0" text="N° Purchases" />
                               <TableColumn fx:id="totalSpentFromMoneySpentTableColumn" prefWidth="200.0" text="Total amount spent" />
                           </columns>
                            <HBox.margin>

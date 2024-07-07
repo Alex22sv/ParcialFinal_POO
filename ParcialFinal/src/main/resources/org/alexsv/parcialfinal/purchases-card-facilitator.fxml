@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ReportDController">
     <children>
         <VBox prefHeight="500.0" prefWidth="800.0">
             <children>
@@ -99,7 +99,7 @@
             </HBox>
                 <VBox alignment="CENTER" prefHeight="74.0" prefWidth="800.0">
                     <children>
-                        <Label text="Purchases whit card's facilitator Section">
+                        <Label text="Purchases with card's facilitator Section">
                             <font>
                                 <Font size="20.0" />
                             </font>
@@ -131,7 +131,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="33.0" prefWidth="800.0">
                      <children>
-                        <Button fx:id="searchPurchasesWithFacilitatorButtom" mnemonicParsing="false" text="Search" />
+                        <Button fx:id="searchPurchasesWithFacilitatorButtom" mnemonicParsing="false" text="Search" onAction="#reportD"/>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="182.0" prefWidth="800.0">
