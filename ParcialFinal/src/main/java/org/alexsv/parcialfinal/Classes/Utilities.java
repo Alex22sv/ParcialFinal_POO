@@ -2,6 +2,7 @@ package org.alexsv.parcialfinal.Classes;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -15,8 +16,8 @@ import java.time.format.DateTimeFormatter;
 public class Utilities {
     private static final String folderPath=""; //00041923 path of the folder in which are going to save the reports
     //still don't have this ↑
-    public static java.sql.Date dateFormat(TextArea date) throws ParseException {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy"); // 00041923 set the format of the date (day - month - year)
+    public static java.sql.Date dateFormat(TextField date) throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-yyyy"); // 00041923 set the format of the date (month - year)
         java.util.Date dateText = dateFormat.parse(date.getText()); // 0041923 make the TextArea text a date type
         return new Date(dateText.getTime()); // 00041923 make the previous java date type to a sql date type and return that date
     }

@@ -1,4 +1,4 @@
-package org.alexsv.parcialfinal.controllers;
+package org.alexsv.parcialfinal.controllers.reports;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
