@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.TransactionController">
    <children>
       <HBox prefHeight="600.0" prefWidth="900.0">
          <children>
@@ -182,12 +182,12 @@
                                           <VBox alignment="TOP_CENTER" prefHeight="220.0" prefWidth="173.0">
                                              <children>
                                                 <Label text="Add new transaction" />
-                                                <TextField maxWidth="75.0" promptText="Client's ID" />
-                                                <TextField maxWidth="75.0" promptText="Card's ID" />
-                                                <DatePicker maxWidth="125.0" promptText="Date" />
-                                                <TextField maxWidth="125.0" promptText="Description" />
-                                                <TextField maxWidth="125.0" promptText="Amount" />
-                                                <Button mnemonicParsing="false" text="Add" />
+                                                <TextField fx:id="clientIdI" maxWidth="75.0" promptText="Client's ID" />
+                                                <TextField fx:id="cardIdI" maxWidth="75.0" promptText="Card's ID" />
+                                                <DatePicker fx:id="transactionDate" maxWidth="125.0" promptText="Date" />
+                                                <TextField fx:id="descriptionI" maxWidth="125.0" promptText="Description" />
+                                                <TextField fx:id="amountI" maxWidth="125.0" promptText="Amount" />
+                                                <Button mnemonicParsing="false" text="Add" onAction="#insert"/>
                                              </children>
                                           </VBox>
                                           <VBox alignment="TOP_CENTER" prefHeight="238.0" prefWidth="197.0">
@@ -197,7 +197,7 @@
                                                       <Insets bottom="10.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <TextField maxWidth="93.0" prefHeight="25.0" prefWidth="93.0" promptText="Transaction ID">
+                                                <TextField fx:id="transactionIdU" maxWidth="93.0" prefHeight="25.0" prefWidth="93.0" promptText="Transaction ID">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin></TextField>
@@ -206,17 +206,17 @@
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <ChoiceBox prefWidth="150.0">
+                                                <ChoiceBox fx:id="transactionUpdateChoice" prefWidth="150.0">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </ChoiceBox>
-                                                <TextField maxWidth="92.0" prefHeight="25.0" prefWidth="92.0" promptText="Info to change">
+                                                <TextField fx:id="updateField" maxWidth="92.0" prefHeight="25.0" prefWidth="92.0" promptText="Info to change">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <Button mnemonicParsing="false" text="Change" />
+                                                <Button mnemonicParsing="false" text="Change"  onAction="#update"/>
                                              </children>
                                           </VBox>
                                           <VBox alignment="TOP_CENTER" prefHeight="157.0" prefWidth="157.0">
@@ -231,12 +231,12 @@
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <TextField maxWidth="93.0" prefHeight="25.0" prefWidth="93.0" promptText="Transaction ID">
+                                                <TextField fx:id="transactionIdD" maxWidth="93.0" prefHeight="25.0" prefWidth="93.0" promptText="Transaction ID">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <Button mnemonicParsing="false" text="Delete">
+                                                <Button mnemonicParsing="false" text="Delete" onAction="#delete">
                                                    <VBox.margin>
                                                       <Insets bottom="15.0" />
                                                    </VBox.margin>
