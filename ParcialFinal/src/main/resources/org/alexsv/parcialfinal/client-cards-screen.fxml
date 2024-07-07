@@ -7,7 +7,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ReportCController">
     <children>
         <VBox prefHeight="600.0" prefWidth="900.0">
             <children>
@@ -126,7 +127,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="33.0" prefWidth="800.0">
                      <children>
-                        <Button fx:id="searchCardsAssocietedButtom" mnemonicParsing="false" text="Search" />
+                        <Button fx:id="searchCardsAssocietedButtom" mnemonicParsing="false" text="Search" onAction="#reportC"/>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="281.0" prefWidth="900.0">

@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class Controller {
     @FXML
-    private void openHome(ActionEvent event) throws IOException {
+    public void openHome(ActionEvent event) throws IOException {
         changeScene(event, "welcome-screen.fxml", "APP");
     }
 
@@ -56,7 +56,7 @@ public class Controller {
         Platform.exit();
     }
 
-    private void changeScene(ActionEvent event, String fxmlFile, String title) throws IOException {
+    protected void changeScene(ActionEvent event, String fxmlFile, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 900, 600);
