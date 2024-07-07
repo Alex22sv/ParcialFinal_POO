@@ -65,7 +65,7 @@ public class Controller {
     }
     @FXML
     private void openB(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("money-spend-screen.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("money-spent-screen.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 800, 500);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -85,7 +85,7 @@ public class Controller {
     }
     @FXML
     private void openD(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("purchases-card-facilitator-screen.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("purchases-card-facilitator.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 800, 500);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
