@@ -24,7 +24,7 @@ public class ClientController {
     @FXML
     private TextField updateField; //00041923 TextField with the information to update
     @FXML
-    protected void insert() throws SQLException { // 00041923 method to insert a client
+    protected void insertClient() throws SQLException { // 00041923 method to insert a client
         Connection db = DatabaseConnection.getConnection(); // 00041923 make the connection with the database
         PreparedStatement ps = db.prepareStatement("INSERT INTO Client VALUES (?,?,?)"); //00041923 query to insert another Client into table
         ps.setString(1,nameClientI.getText()); //00041923 put the parameters from the prepareStatement in first index, in this case is the name
@@ -35,7 +35,7 @@ public class ClientController {
     }
 
     @FXML
-    protected void update() throws SQLException { //00041923 method to update a client
+    protected void updateClient() throws SQLException { //00041923 method to update a client
         Connection db = DatabaseConnection.getConnection(); // 00041923 make the connection with the database
         String column = ""; //00041923 variable that refers to the column to update
         switch (clientUpdateChoice.getValue()){ //00041923 verify the text on ComboBox to select a column
@@ -49,17 +49,24 @@ public class ClientController {
                 column = "phoneNumber"; //00041923 the column will be "phoneNumber"
                 break; // 00041923 break the sequence
         }
-        Statement statement = db.createStatement(); //00041923 create a statement to execute a query
+        /*Statement statement = db.createStatement(); //00041923 create a statement to execute a query
         statement.execute("UPDATE Client SET " + column + " = " + updateField.getText() + " WHERE clientId = " + idClientU.getText()); //00041923 Execute the query with the updates in table
+*/
+        PreparedStatement preparedStatement = db.prepareStatement("UPDATE Client SET ? = ? WHERE clientId = ?"); // 00024123 Create a prepared statement to update the client
+        preparedStatement.setString(1, column); // 00024123 Set the column in the prepared statement
+        preparedStatement.setString(2, updateField.getText()); // 00024123 Set the column value in the prepared statement
+        preparedStatement.setInt(3, Integer.parseInt(idClientU.getText())); // 00024123 Set the client id in the prepared statement
+        preparedStatement.executeUpdate();
         db.close(); // 00041923 close de database connection
     }
 
     @FXML
-    protected void delete() throws SQLException { //00041923 method to delete a client
+    protected void deleteClient() throws SQLException { //00041923 method to delete a client
         Connection db = DatabaseConnection.getConnection(); // 00041923 make the connection with the database
-        Statement statement = db.createStatement(); //00041923 create a statement to execute a query
-        statement.execute("DELETE FROM Client WHERE ID = " + idClientD.getText()); //00041923 execute the query deleting the client
-        db.close(); //00041923 close de database connection
+        PreparedStatement preparedStatement = db.prepareStatement("DELETE FROM Client WHERE clientId = ?"); // 00024123 Create a prepared statement to delete the client
+        preparedStatement.setInt(1, Integer.parseInt(idClientU.getText())); // 00024123 Set the client id in the prepared statement
+        preparedStatement.executeUpdate(); // 00024123 Execute the update
+        db.close(); //00041923 Close de database connection
     }
 
     @FXML
