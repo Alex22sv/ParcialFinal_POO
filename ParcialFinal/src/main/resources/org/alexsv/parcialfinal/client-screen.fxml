@@ -186,7 +186,6 @@
                                           <VBox alignment="TOP_CENTER" prefHeight="174.0" prefWidth="173.0">
                                              <children>
                                                 <Label text="Add new client" />
-                                                <TextField maxWidth="75.0" promptText="Client's ID" />
                                                 <TextField maxWidth="125.0" promptText="First name" />
                                                 <TextField maxWidth="125.0" promptText="Last name" />
                                                 <TextField maxWidth="125.0" promptText="Address" />

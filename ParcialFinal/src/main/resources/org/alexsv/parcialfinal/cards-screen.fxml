@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -189,10 +190,9 @@
                                                 <Label text="Add new card" />
                                                 <TextField maxWidth="75.0" promptText="Client's ID" />
                                                 <ComboBox prefWidth="150.0" promptText="Type of card" />
-                                                <TextField maxWidth="125.0" promptText="Card's ID" />
                                                 <TextField maxWidth="125.0" promptText="Facilitator" />
                                                 <TextField maxWidth="125.0" promptText="Number" />
-                                                <TextField maxWidth="125.0" promptText="Exp Date" />
+                                                <DatePicker maxWidth="125.0" promptText="Exp Date" />
                                                 <Button mnemonicParsing="false" text="Add" />
                                              </children>
                                           </VBox>
@@ -203,7 +203,7 @@
                                                       <Insets bottom="10.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <TextField maxWidth="75.0" promptText="Client's ID" />
+                                                <TextField maxWidth="75.0" promptText="Card's ID" />
                                                 <Label text="Select info to change">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
@@ -234,16 +234,11 @@
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <TextField maxWidth="75.0" promptText="Client's ID">
+                                                <TextField maxWidth="75.0" promptText="Card's ID">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <ComboBox prefWidth="150.0" promptText="Select one card">
-                                                   <VBox.margin>
-                                                      <Insets bottom="5.0" />
-                                                   </VBox.margin>
-                                                </ComboBox>
                                                 <Button mnemonicParsing="false" text="Delete">
                                                    <VBox.margin>
                                                       <Insets bottom="15.0" />
