@@ -7,9 +7,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ReportAController">
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ReportAController">
     <children>
-        <VBox prefHeight="500.0" prefWidth="800.0">
+        <VBox prefHeight="600.0" prefWidth="900.0">
             <children>
             <HBox style="-fx-background-color: #305684;">
                <children>
@@ -115,7 +116,7 @@
                         </Label>
                     </children>
                 </VBox>
-                <VBox prefHeight="301.0" prefWidth="800.0">
+                <VBox prefHeight="403.0" prefWidth="900.0">
                     <children>
                         <HBox prefHeight="69.0" prefWidth="800.0">
                             <children>
@@ -144,14 +145,14 @@
                                 <Button fx:id="searchPurchasesMadeButtom" mnemonicParsing="false" text="Search" onAction="#reportA"/>
                             </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="182.0" prefWidth="800.0">
+                        <HBox alignment="CENTER" prefHeight="286.0" prefWidth="900.0">
                             <children>
-                                <TableView fx:id="purchasesMadeTable" prefHeight="182.0" prefWidth="765.0">
+                                <TableView fx:id="purchasesMadeTable" prefHeight="282.0" prefWidth="800.0">
                                     <columns>
                                         <TableColumn fx:id="purchaseDateFromPurchaseTableColumn" prefWidth="109.3333410024643" text="Purchase date" />
                                         <TableColumn fx:id="totalAmountFromPurchaseTableColumn" prefWidth="134.66667938232422" text="Total amount" />
                                         <TableColumn fx:id="DescriptionFromPurchaseTableColumn" prefWidth="303.99998474121094" text="Description" />
-                                        <TableColumn fx:id="electronicCardFromPurchaseTableColumn" minWidth="0.0" prefWidth="215.99993896484375" text="Electronic card" />
+                                        <TableColumn fx:id="electronicCardFromPurchaseTableColumn" minWidth="0.0" prefWidth="250.4000244140625" text="Card" />
                                     </columns>
                                     <HBox.margin>
                                         <Insets top="5.0" />

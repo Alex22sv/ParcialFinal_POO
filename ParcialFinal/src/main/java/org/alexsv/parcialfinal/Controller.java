@@ -59,7 +59,7 @@ public class Controller {
     protected void changeScene(ActionEvent event, String fxmlFile, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 800, 500);
+        Scene scene = new Scene(root, 900, 600);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
         stage.setScene(scene);
