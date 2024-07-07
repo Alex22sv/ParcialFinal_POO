@@ -26,7 +26,7 @@ public class ClientController {
     @FXML
     protected void insertClient() throws SQLException { // 00041923 method to insert a client
         Connection db = DatabaseConnection.getConnection(); // 00041923 make the connection with the database
-        PreparedStatement ps = db.prepareStatement("INSERT INTO Client VALUES (?,?,?)"); //00041923 query to insert another Client into table
+        PreparedStatement ps = db.prepareStatement("INSERT INTO Client (`name`, `address`, `phoneNumber`) VALUES (?,?,?)"); //00041923 query to insert another Client into table
         ps.setString(1,nameClientI.getText()); //00041923 put the parameters from the prepareStatement in first index, in this case is the name
         ps.setString(2, addressI.getText()); //00041923 put the parameters from the prepareStatement in second index, in this case is the address
         ps.setString(3, phoneNumberI.getText()); //00041923 put the parameters from the prepareStatement in third index, in this case is the phone number
