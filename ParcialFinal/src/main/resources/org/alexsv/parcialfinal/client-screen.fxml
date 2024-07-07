@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ClientController">
    <children>
       <HBox prefHeight="500.0" prefWidth="800.0">
          <children>
@@ -90,7 +90,7 @@
                                        </cursor>
                                     </Button>
 
-                                    <Button mnemonicParsing="false" onAction="#exitApplication" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Exit" >
+                                    <Button mnemonicParsing="false" onAction="#exitApplication" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Exit">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
@@ -179,14 +179,14 @@
                                  <children>
                                     <HBox prefHeight="187.0" prefWidth="554.0">
                                        <children>
-                                          <VBox alignment="TOP_CENTER" prefHeight="174.0" prefWidth="173.0">
+                                          <VBox alignment="TOP_CENTER" prefHeight="174.0" prefWidth="173.0" >
                                              <children>
                                                 <Label text="Add new client" />
-                                                <TextField maxWidth="125.0" promptText="First name" />
-                                                <TextField maxWidth="125.0" promptText="Last name" />
-                                                <TextField maxWidth="125.0" promptText="Address" />
-                                                <TextField maxWidth="125.0" promptText="Phone number" />
-                                                <Button mnemonicParsing="false" text="Add" />
+                                                <TextField fx:id="nameClientI" maxWidth="125.0" promptText="First name" />
+                                                <TextField fx:id="lastnameClientI" maxWidth="125.0" promptText="Last name" />
+                                                <TextField fx:id="addressI" maxWidth="125.0" promptText="Address" />
+                                                <TextField fx:id="phoneNumberI" maxWidth="125.0" promptText="Phone number" />
+                                                <Button mnemonicParsing="false" text="Add" onAction="#insert" />
                                              </children>
                                           </VBox>
                                           <VBox alignment="TOP_CENTER" prefHeight="174.0" prefWidth="197.0">
@@ -196,23 +196,23 @@
                                                       <Insets bottom="10.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <TextField maxWidth="75.0" promptText="Client's ID" />
+                                                <TextField fx:id="idClientU" maxWidth="75.0" promptText="Client's ID" />
                                                 <Label text="Select info to change">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <ChoiceBox prefWidth="150.0">
+                                                <ChoiceBox fx:id="clientUpdateChoice" prefWidth="150.0">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </ChoiceBox>
-                                                <TextField maxWidth="92.0" prefHeight="25.0" prefWidth="92.0" promptText="Info to change">
+                                                <TextField fx:id="updateField" maxWidth="92.0" prefHeight="25.0" prefWidth="92.0" promptText="Info to change">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <Button mnemonicParsing="false" text="Change" />
+                                                <Button mnemonicParsing="false" text="Change" onAction="#update" />
                                              </children>
                                           </VBox>
                                           <VBox alignment="TOP_CENTER" prefHeight="157.0" prefWidth="157.0">
@@ -227,18 +227,18 @@
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <TextField maxWidth="75.0" promptText="Client's ID">
+                                                <TextField fx:id="idClientD" maxWidth="75.0" promptText="Client's ID">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <Button mnemonicParsing="false" text="Delete">
+                                                <Button mnemonicParsing="false" text="Delete" onAction="#delete">
                                                    <VBox.margin>
                                                       <Insets bottom="15.0" />
                                                    </VBox.margin>
                                                 </Button>
                                                 <Label text="Show clients" />
-                                                <Button mnemonicParsing="false" text="Show" />
+                                                <Button mnemonicParsing="false" text="Show" onAction="#show" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -250,9 +250,9 @@
                      </children></VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                        <ScrollPane fx:id="dataPane" prefHeight="200.0" prefWidth="200.0">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                            <AnchorPane fx:id="informationShow" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
                           </content>
                            <VBox.margin>
                               <Insets left="5.0" right="5.0" />
