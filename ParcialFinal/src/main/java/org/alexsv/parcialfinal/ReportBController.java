@@ -1,20 +1,15 @@
 package org.alexsv.parcialfinal;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.alexsv.parcialfinal.Classes.DatabaseConnection;
-import org.alexsv.parcialfinal.Classes.Utilities;
-
 import java.io.IOException;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
 public class ReportBController extends Controller {
     @FXML
