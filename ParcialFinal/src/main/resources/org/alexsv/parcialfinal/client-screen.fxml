@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.Cursor?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
    <children>
       <HBox prefHeight="500.0" prefWidth="800.0">
@@ -75,30 +67,34 @@
                               </VBox>
                               <VBox alignment="CENTER_LEFT" prefHeight="338.0" prefWidth="123.0">
                                  <children>
-                                    <Button mnemonicParsing="false" onAction="#openHome" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Home" >
+                                    <Button mnemonicParsing="false" onAction="#openHome" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Home">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Button>
-                                    <Button mnemonicParsing="false" onAction="#openClient" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Clients" >
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </Button>
-
-                                    <Button mnemonicParsing="false" onAction="#openCards" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Cards" >
+                                    <Button mnemonicParsing="false" onAction="#openClient" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Clients">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Button>
 
-                                    <Button mnemonicParsing="false" onAction="#openTransaction" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Transaction" >
+                                    <Button mnemonicParsing="false" onAction="#openCards" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Cards">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Button>
 
-                                    <Button mnemonicParsing="false" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Exit" />
+                                    <Button mnemonicParsing="false" onAction="#openTransaction" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Transaction">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+
+                                    <Button mnemonicParsing="false" onAction="#exitApplication" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Exit" >
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
 
                                  </children></VBox>
                            </children>
@@ -124,7 +120,7 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
                                  <children>
-                                    <Button onAction="#openA" maxHeight="75.0" maxWidth="200.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases per&#10;Customer" textAlignment="CENTER" textFill="#305684" underline="true">
+                                    <Button maxHeight="75.0" maxWidth="200.0" mnemonicParsing="false" onAction="#openA" prefHeight="75.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases per&#10;Customer" textAlignment="CENTER" textFill="#305684" underline="true">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
@@ -135,7 +131,7 @@
                               </VBox>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
                                  <children>
-                                    <Button onAction="#openB" alignment="CENTER" contentDisplay="CENTER" maxHeight="73.0" maxWidth="170.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Spent per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="73.0" maxWidth="170.0" mnemonicParsing="false" onAction="#openB" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Spent per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
@@ -146,7 +142,7 @@
                               </VBox>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
                                  <children>
-                                    <Button onAction="#openC" contentDisplay="CENTER" maxHeight="73.0" maxWidth="164.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Cards per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                    <Button contentDisplay="CENTER" maxHeight="73.0" maxWidth="164.0" mnemonicParsing="false" onAction="#openC" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Cards per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
@@ -157,7 +153,7 @@
                               </VBox>
                               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
                                  <children>
-                                    <Button onAction="#openD" alignment="CENTER" contentDisplay="CENTER" maxHeight="74.0" maxWidth="157.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases by&#10;Facilitator" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="74.0" maxWidth="157.0" mnemonicParsing="false" onAction="#openD" prefHeight="74.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases by&#10;Facilitator" textAlignment="CENTER" textFill="WHITE" underline="true">
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
