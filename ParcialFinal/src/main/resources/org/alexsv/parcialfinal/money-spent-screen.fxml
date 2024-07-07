@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
     <children>
-        <VBox prefHeight="500.0" prefWidth="800.0">
+        <VBox prefHeight="600.0" prefWidth="900.0">
             <children>
             <HBox style="-fx-background-color: #305684;">
                <children>
@@ -115,7 +115,7 @@
                         </Label>
                     </children>
                 </VBox>
-                <VBox prefHeight="301.0" prefWidth="800.0">
+                <VBox prefHeight="402.0" prefWidth="900.0">
                <children>
                   <HBox prefHeight="69.0" prefWidth="800.0">
                      <children>
@@ -144,13 +144,13 @@
                         <Button fx:id="searchMoneySpentButtom" mnemonicParsing="false" text="Search" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="145.0" prefWidth="800.0">
+                  <HBox alignment="CENTER" prefHeight="284.0" prefWidth="900.0">
                      <children>
-                        <TableView fx:id="MoneySpentTable" prefHeight="131.0" prefWidth="600.0">
+                        <TableView fx:id="MoneySpentTable" prefHeight="279.0" prefWidth="800.0">
                           <columns>
-                            <TableColumn fx:id="clientsNameFromMoneySpentTableColumn" prefWidth="200.0" text="Client's name" />
-                            <TableColumn fx:id="numPurchasesFromMoneySpentTableColumn" prefWidth="200.0" text="N° Purchases" />
-                              <TableColumn fx:id="totalSpentFromMoneySpentTableColumn" prefWidth="200.0" text="Total amount spent" />
+                            <TableColumn fx:id="clientsNameFromMoneySpentTableColumn" prefWidth="351.2000068426132" text="Client's name" />
+                            <TableColumn fx:id="numPurchasesFromMoneySpentTableColumn" prefWidth="227.199951171875" text="N° Purchases" />
+                              <TableColumn fx:id="totalSpentFromMoneySpentTableColumn" prefWidth="218.0" text="Total amount spent" />
                           </columns>
                            <HBox.margin>
                               <Insets top="5.0" />

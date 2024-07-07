@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
     <children>
-        <VBox prefHeight="500.0" prefWidth="800.0">
+        <VBox prefHeight="600.0" prefWidth="900.0">
             <children>
             <HBox style="-fx-background-color: #305684;">
                <children>
@@ -112,7 +112,7 @@
                         </Label>
                     </children>
                 </VBox>
-                <VBox prefHeight="301.0" prefWidth="800.0">
+                <VBox prefHeight="398.0" prefWidth="900.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="69.0" prefWidth="800.0">
                      <children>
@@ -129,12 +129,12 @@
                         <Button fx:id="searchCardsAssocietedButtom" mnemonicParsing="false" text="Search" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="182.0" prefWidth="800.0">
+                  <HBox alignment="CENTER" prefHeight="281.0" prefWidth="900.0">
                      <children>
-                        <TableView fx:id="cardsAssociatedTable" prefHeight="177.0" prefWidth="600.0">
+                        <TableView fx:id="cardsAssociatedTable" prefHeight="277.0" prefWidth="800.0">
                           <columns>
-                            <TableColumn fx:id="creditCardsFromCardsTableColumn" prefWidth="300.0" text="Credit cards" />
-                            <TableColumn fx:id="debitCardsFromCardsTableColumn" prefWidth="300.0" text="Debir cards" />
+                            <TableColumn fx:id="creditCardsFromCardsTableColumn" prefWidth="399.00002133846283" text="Credit cards" />
+                            <TableColumn fx:id="debitCardsFromCardsTableColumn" prefWidth="397.5999450683594" text="Debir cards" />
                           </columns>
                            <HBox.margin>
                               <Insets top="5.0" />

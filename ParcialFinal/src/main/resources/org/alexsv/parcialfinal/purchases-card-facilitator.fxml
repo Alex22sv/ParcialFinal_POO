@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
     <children>
-        <VBox prefHeight="500.0" prefWidth="800.0">
+        <VBox prefHeight="600.0" prefWidth="900.0">
             <children>
             <HBox style="-fx-background-color: #305684;">
                <children>
@@ -117,7 +117,7 @@
                         </Label>
                     </children>
                 </VBox>
-                <VBox prefHeight="301.0" prefWidth="800.0">
+                <VBox prefHeight="400.0" prefWidth="900.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="69.0" prefWidth="800.0">
                      <children>
@@ -134,14 +134,14 @@
                         <Button fx:id="searchPurchasesWithFacilitatorButtom" mnemonicParsing="false" text="Search" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="182.0" prefWidth="800.0">
+                  <HBox alignment="CENTER" prefHeight="285.0" prefWidth="900.0">
                      <children>
-                        <TableView fx:id="purchasesWithFacilitatorTable" prefHeight="177.0" prefWidth="750.0">
+                        <TableView fx:id="purchasesWithFacilitatorTable" prefHeight="281.0" prefWidth="800.0">
                           <columns>
                             <TableColumn fx:id="numFrompurchasesWithFacilitatorTableColumn" prefWidth="34.66662538051605" text="#" />
                             <TableColumn fx:id="clientsNameFrompurchasesWithFacilitatorTableColumn" prefWidth="225.33330154418945" text="Client's name" />
                               <TableColumn fx:id="totalPurchasesFrompurchasesWithFacilitatorTableColumn" prefWidth="254.00006103515625" text="Total Purchases" />
-                              <TableColumn fx:id="amountSpentFrompurchasesWithFacilitatorTableColumn" prefWidth="237.33331298828125" text="Total amount spent" />
+                              <TableColumn fx:id="amountSpentFrompurchasesWithFacilitatorTableColumn" prefWidth="281.60003662109375" text="Total amount spent" />
                           </columns>
                            <HBox.margin>
                               <Insets top="5.0" />
