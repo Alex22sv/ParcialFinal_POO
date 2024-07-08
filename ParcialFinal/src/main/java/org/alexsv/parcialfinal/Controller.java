@@ -67,24 +67,24 @@ public class Controller {
         stage.show();
     }
     @FXML
-    public void successfullOperation(){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Success");
-        alert.setHeaderText("The operation was successfully executed.");
-        alert.showAndWait();
+    public void successfullOperation(){ // 00024123 this method displays an alert when the operation was successfully executed
+        Alert alert = new Alert(Alert.AlertType.INFORMATION); // 00024123 Create a new alert with the alert type
+        alert.setTitle("Success"); // 00024123 Set the alert's title
+        alert.setHeaderText("The operation was successfully executed."); // 00024123 Set the alert's header text
+        alert.showAndWait();  // 00024123 Display the alert
     }
     @FXML
-    public void failedOperation(){
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error!");
-        alert.setHeaderText("The operation resulted in an unexpected error.");
-        alert.showAndWait();
+    public void failedOperation(){ // 00024123 this method displays an alert when the operation resulted in error
+        Alert alert = new Alert(Alert.AlertType.ERROR); // 00024123 Create a new alert with the alert type
+        alert.setTitle("Error!"); // 00024123 Set the alert's title
+        alert.setHeaderText("The operation resulted in an unexpected error."); // 00024123 Set the alert's header text
+        alert.showAndWait();  // 00024123 Display the alert
     }
     @FXML
-    public void emptyOperation(){
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Warning!");
-        alert.setHeaderText("Please fulfill all requirements.");
-        alert.showAndWait();
+    public void emptyOperation(){ // 00024123 this method displays an alert when the operation is missing requirements
+        Alert alert = new Alert(Alert.AlertType.WARNING); // 00024123 Create a new alert with the alert type
+        alert.setTitle("Warning!"); // 00024123 Set the alert's title
+        alert.setHeaderText("Please fulfill all requirements."); // 00024123 Set the alert's header text
+        alert.showAndWait();  // 00024123 Display the alert
     }
 }
