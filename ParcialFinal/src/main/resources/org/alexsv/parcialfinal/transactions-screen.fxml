@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.TransactionController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.TransactionController">
    <children>
       <HBox prefHeight="600.0" prefWidth="900.0">
          <children>
@@ -190,7 +200,7 @@
                                                 <DatePicker fx:id="transactionDate" maxWidth="125.0" promptText="Date" />
                                                 <TextField fx:id="descriptionI" maxWidth="125.0" promptText="Description" />
                                                 <TextField fx:id="amountI" maxWidth="125.0" promptText="Amount" />
-                                                <Button mnemonicParsing="false" text="Add" onAction="#insert"/>
+                                                <Button mnemonicParsing="false" onAction="#insert" text="Add" />
                                              </children>
                                           </VBox>
                                           <VBox alignment="TOP_CENTER" prefHeight="238.0" prefWidth="197.0">
@@ -219,7 +229,7 @@
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <Button mnemonicParsing="false" text="Change"  onAction="#update"/>
+                                                <Button mnemonicParsing="false" onAction="#update" text="Change" />
                                              </children>
                                           </VBox>
                                           <VBox alignment="TOP_CENTER" prefHeight="157.0" prefWidth="157.0">
@@ -239,13 +249,13 @@
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <Button mnemonicParsing="false" text="Delete" onAction="#delete">
+                                                <Button mnemonicParsing="false" onAction="#delete" text="Delete">
                                                    <VBox.margin>
                                                       <Insets bottom="15.0" />
                                                    </VBox.margin>
                                                 </Button>
                                                 <Label text="show transactions" />
-                                                <Button mnemonicParsing="false" text="Show" />
+                                                <Button mnemonicParsing="false" text="Show" onAction="#show"/>
                                              </children>
                                           </VBox>
                                        </children>
@@ -261,6 +271,18 @@
                            <VBox.margin>
                               <Insets left="5.0" right="5.0" top="10.0" />
                            </VBox.margin>
+                           <content>
+                              <TableView fx:id="transactionsTableView" prefHeight="249.0" prefWidth="621.0">
+                                <columns>
+                                  <TableColumn fx:id="transactionsTableViewId" prefWidth="31.0" text="#" />
+                                  <TableColumn fx:id="transactionsTableViewPurchaseDate" prefWidth="115.0" text="Purchase date" />
+                                    <TableColumn fx:id="transactionsTableViewTotalAmount" prefWidth="76.0" text="Total" />
+                                    <TableColumn fx:id="transactionsTableViewDescription" prefWidth="279.0" text="Description" />
+                                    <TableColumn fx:id="transactionsTableViewClientId" prefWidth="68.0" text="Client" />
+                                    <TableColumn fx:id="transactionsTableViewCardId" prefWidth="51.0" text="Card" />
+                                </columns>
+                              </TableView>
+                           </content>
                         </ScrollPane>
                      </children>
                   </VBox>

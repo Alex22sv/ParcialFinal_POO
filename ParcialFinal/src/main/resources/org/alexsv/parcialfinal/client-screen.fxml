@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ClientController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ClientController">
    <children>
       <HBox prefHeight="600.0" prefWidth="900.0">
          <children>
@@ -255,12 +264,19 @@
                      <children>
 
                         <ScrollPane fx:id="dataPane" prefHeight="305.0" prefWidth="626.0">
-                          <content>
-                            <AnchorPane fx:id="informationShow" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-                          </content>
                            <VBox.margin>
                               <Insets left="5.0" right="5.0" />
                            </VBox.margin>
+                           <content>
+                              <TableView fx:id="clientsTableView" prefHeight="303.0" prefWidth="623.0">
+                                <columns>
+                                  <TableColumn fx:id="clientsTableViewClientId" prefWidth="38.0" text="#" />
+                                  <TableColumn fx:id="clientsTableViewName" prefWidth="200.0" text="Name" />
+                                    <TableColumn fx:id="clientsTableViewAddress" prefWidth="247.0" text="Address" />
+                                    <TableColumn fx:id="clientsTableViewPhone" prefWidth="137.0" text="Phone number" />
+                                </columns>
+                              </TableView>
+                           </content>
                         </ScrollPane>
                      </children>
                   </VBox>
