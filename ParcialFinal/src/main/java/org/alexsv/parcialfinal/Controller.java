@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -65,5 +66,25 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
     }
-
+    @FXML
+    public void successfullOperation(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success");
+        alert.setHeaderText("The operation was successfully executed.");
+        alert.showAndWait();
+    }
+    @FXML
+    public void failedOperation(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error!");
+        alert.setHeaderText("The operation resulted in an unexpected error.");
+        alert.showAndWait();
+    }
+    @FXML
+    public void emptyOperation(){
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Warning!");
+        alert.setHeaderText("Please fulfill all requirements.");
+        alert.showAndWait();
+    }
 }
