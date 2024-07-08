@@ -170,14 +170,17 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="38.0" prefWidth="554.0">
                            <children>
-                              <Label text="Transactions section" />
+                              <Label text="Transactions section">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Label>
                            </children>
                         </VBox>
                         <VBox prefHeight="223.0" prefWidth="554.0">
                            <children>
                               <VBox prefHeight="252.0" prefWidth="554.0">
                                  <children>
-                                    <HBox prefHeight="322.0" prefWidth="554.0">
+                                    <HBox alignment="CENTER" prefHeight="322.0" prefWidth="554.0">
                                        <children>
                                           <VBox alignment="TOP_CENTER" prefHeight="220.0" prefWidth="173.0">
                                              <children>

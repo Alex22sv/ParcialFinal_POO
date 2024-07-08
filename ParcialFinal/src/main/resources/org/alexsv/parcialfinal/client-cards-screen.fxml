@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ReportCController">
     <children>
         <VBox prefHeight="600.0" prefWidth="900.0">
@@ -27,9 +26,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="126.0" prefWidth="670.0">
+                  <HBox alignment="CENTER" prefHeight="126.0" prefWidth="745.0">
                       <children>
-                          <HBox alignment="CENTER" prefHeight="126.0" prefWidth="645.0" style="-fx-background-color: #305684;">
+                          <HBox alignment="CENTER" prefHeight="126.0" prefWidth="678.0" style="-fx-background-color: #305684;">
                               <children>
                                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
                                       <children>
@@ -113,7 +112,7 @@
                         </Label>
                     </children>
                 </VBox>
-                <VBox prefHeight="398.0" prefWidth="900.0">
+                <VBox alignment="CENTER" prefHeight="398.0" prefWidth="900.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="69.0" prefWidth="800.0">
                      <children>
@@ -127,7 +126,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="33.0" prefWidth="800.0">
                      <children>
-                        <Button fx:id="searchCardsAssocietedButtom" mnemonicParsing="false" text="Search" onAction="#reportC"/>
+                        <Button fx:id="searchCardsAssocietedButtom" mnemonicParsing="false" onAction="#reportC" text="Search" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="281.0" prefWidth="900.0">

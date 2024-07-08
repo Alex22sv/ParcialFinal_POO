@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ReportAController">
     <children>
         <VBox prefHeight="600.0" prefWidth="900.0">
@@ -27,7 +26,7 @@
                             </VBox>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="125.0" prefWidth="644.0">
+                  <HBox alignment="CENTER" prefHeight="126.0" prefWidth="744.0">
                       <children>
                           <HBox alignment="CENTER" prefHeight="126.0" prefWidth="649.0" style="-fx-background-color: #305684;">
                               <children>
@@ -118,12 +117,12 @@
                 </VBox>
                 <VBox prefHeight="403.0" prefWidth="900.0">
                     <children>
-                        <HBox prefHeight="69.0" prefWidth="800.0">
+                        <HBox alignment="CENTER" prefHeight="69.0" prefWidth="800.0">
                             <children>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
                                     <children>
                                         <Label text="Client's ID" />
-                                        <TextField maxWidth="150.0" promptText="ID here" fx:id="clientIdPurchaseField" />
+                                        <TextField fx:id="clientIdPurchaseField" maxWidth="150.0" promptText="ID here" />
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
@@ -142,7 +141,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="33.0" prefWidth="800.0">
                             <children>
-                                <Button fx:id="searchPurchasesMadeButtom" mnemonicParsing="false" text="Search" onAction="#reportA"/>
+                                <Button fx:id="searchPurchasesMadeButtom" mnemonicParsing="false" onAction="#reportA" text="Search" />
                             </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="286.0" prefWidth="900.0">
