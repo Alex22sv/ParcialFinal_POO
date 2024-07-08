@@ -123,30 +123,42 @@ public class TransactionController extends Controller{
     }
 
     @FXML
-    protected void delete() throws SQLException {
-        if(!transactionIdD.getText().equals("")){
-            Connection db = DatabaseConnection.getConnection();
-            Statement statement = db.createStatement();
-            statement.execute("DELETE FROM Transaction WHERE transactionId = " + transactionIdD);
-            successfullOperation();
-            transactionIdD.setText("");
-            if(!transactionsTableView.getItems().isEmpty()){
-                show();
+    protected void delete() {
+        try {
+            if(!transactionIdD.getText().equals("")){
+                Connection db = DatabaseConnection.getConnection();
+                Statement statement = db.createStatement();
+                statement.execute("DELETE FROM Transaction WHERE transactionId = " + transactionIdD);
+                successfullOperation();
+                transactionIdD.setText("");
+                if(!transactionsTableView.getItems().isEmpty()){
+                    show();
+                }
+                db.close();
+            } else {
+                emptyOperation();
             }
-            db.close();
-        } else {
-            emptyOperation();
+        } catch(SQLSyntaxErrorException e){
+            failedOperation();
+        } catch(SQLException e){
+            failedOperation();
+        } catch(Exception e){
+            failedOperation();
         }
     }
 
     @FXML
-    protected void show() throws SQLException{
-        transactionsTableView.getItems().clear();
-        Connection db = DatabaseConnection.getConnection(); // 00024123 make the connection with the database
-        Statement statement = db.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM Transaction");
-        while(resultSet.next()){
-            transactionsTableView.getItems().add(new Transaction(resultSet.getInt("transactionID"), resultSet.getString("purchaseDate"), "$" + resultSet.getString("totalAmount"), resultSet.getString("description"), resultSet.getInt("clientId"), resultSet.getInt("cardId")));
+    protected void show() {
+        try {
+            transactionsTableView.getItems().clear();
+            Connection db = DatabaseConnection.getConnection(); // 00024123 make the connection with the database
+            Statement statement = db.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM Transaction");
+            while(resultSet.next()){
+                transactionsTableView.getItems().add(new Transaction(resultSet.getInt("transactionID"), resultSet.getString("purchaseDate"), "$" + resultSet.getString("totalAmount"), resultSet.getString("description"), resultSet.getInt("clientId"), resultSet.getInt("cardId")));
+            }
+        } catch(SQLException e){
+            failedOperation();
         }
     }
 
