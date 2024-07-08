@@ -70,6 +70,11 @@ public class TransactionController extends Controller{
             if(!transactionsTableView.getItems().isEmpty()){
                 show();
             }
+            transactionDate.setValue(null);
+            amountI.setText("");
+            descriptionI.setText("");
+            clientIdI.setText("");
+            cardIdI.setText("");
             successfullOperation();
             db.close();
         } else {
