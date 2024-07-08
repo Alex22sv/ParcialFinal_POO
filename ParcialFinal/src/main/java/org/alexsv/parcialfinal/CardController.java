@@ -81,6 +81,9 @@ public class CardController extends Controller { //00016023 class of the card-sc
             cardTypeI.setValue(null);
             facilitatorI.setText("");
             idClientI.setText("");
+            if(!cardsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close(); // 00016023 close the database connection
         } else{
@@ -117,6 +120,9 @@ public class CardController extends Controller { //00016023 class of the card-sc
             cardUpdateChoice.setValue(null);
             updateField.setText("");
             idCardU.setText("");
+            if(!cardsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close(); // 00016023 close the database connection
         } else{
@@ -131,6 +137,9 @@ public class CardController extends Controller { //00016023 class of the card-sc
             Statement statement = db.createStatement(); //00016023 create a statement to execute a query
             statement.execute("DELETE FROM Card WHERE cardId = " + idCardD.getText()); //00016023 execute the query deleting the card
             idCardD.setText("");
+            if(!cardsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close(); //00016023 close the database connection
         } else {

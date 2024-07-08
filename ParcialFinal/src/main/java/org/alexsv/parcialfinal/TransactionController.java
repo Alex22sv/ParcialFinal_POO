@@ -67,6 +67,9 @@ public class TransactionController extends Controller{
             ps.setInt(4, Integer.parseInt(clientIdI.getText()));
             ps.setInt(5, Integer.parseInt(cardIdI.getText()));
             ps.executeUpdate();
+            if(!transactionsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close();
         } else {
@@ -104,6 +107,9 @@ public class TransactionController extends Controller{
             transactionUpdateChoice.setValue(null);
             updateField.setText("");
             transactionIdU.setText("");
+            if(!transactionsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close();
         } else {
@@ -119,6 +125,9 @@ public class TransactionController extends Controller{
             statement.execute("DELETE FROM Transaction WHERE transactionId = " + transactionIdD);
             successfullOperation();
             transactionIdD.setText("");
+            if(!transactionsTableView.getItems().isEmpty()){
+                show();
+            }
             db.close();
         } else {
             emptyOperation();

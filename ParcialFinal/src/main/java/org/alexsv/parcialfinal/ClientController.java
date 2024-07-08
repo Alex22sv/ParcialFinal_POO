@@ -63,6 +63,9 @@ public class ClientController extends Controller { //00041923 class of the clien
             lastnameClientI.setText("");
             addressI.setText("");
             phoneNumberI.setText("");
+            if(!clientsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close(); // 00041923 close de database connection
         } else {
@@ -92,6 +95,9 @@ public class ClientController extends Controller { //00041923 class of the clien
             ps.executeUpdate(); //00041923 execute the previous query
             updateField.setText("");
             idClientU.setText("");
+            if(!clientsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close(); // 00041923 close de database connection
         } else
@@ -105,6 +111,9 @@ public class ClientController extends Controller { //00041923 class of the clien
             Statement statement = db.createStatement(); //00041923 create a statement to execute a query
             statement.execute("DELETE FROM Client WHERE clientId = " + idClientD.getText()); //00041923 execute the query deleting the client
             idClientD.setText("");
+            if(!clientsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close(); //00041923 close de database connection
         } else {
