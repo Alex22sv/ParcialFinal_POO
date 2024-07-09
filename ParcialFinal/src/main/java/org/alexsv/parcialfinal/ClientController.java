@@ -30,44 +30,44 @@ public class ClientController extends Controller { //00041923 class of the clien
     @FXML
     private ScrollPane dataPane; //00041923 ScrollPane to see the table information
     @FXML
-    private TableView<Client> clientsTableView;
+    private TableView<Client> clientsTableView; // 00024123 TableView to display the clients
     @FXML
-    private TableColumn<Client, Integer> clientsTableViewClientId;
+    private TableColumn<Client, Integer> clientsTableViewClientId; // 00024123 TableColumn to display the client IDs
     @FXML
-    private TableColumn<Client, String> clientsTableViewName;
+    private TableColumn<Client, String> clientsTableViewName; // 00024123 TableColumn to display the client names
     @FXML
-    private TableColumn<Client, String> clientsTableViewAddress;
+    private TableColumn<Client, String> clientsTableViewAddress; // 00024123 TableColumn to display the client addresses
     @FXML
-    private TableColumn<Client, String> clientsTableViewPhone;
+    private TableColumn<Client, String> clientsTableViewPhone; // 00024123 TableColumn to display the client phone numbers
     @FXML
     protected void initialize(){ //00041923 initialize some elements
-        clientUpdateChoice.getItems().addAll("Name","Address","Phone Number"); //00041923 add the options to the ChoiceBox
+        clientUpdateChoice.getItems().addAll("Name","Address","Phone Number"); //00041923 Add the options to the ChoiceBox
 
-        clientsTableViewClientId.setCellValueFactory(new PropertyValueFactory<>("clientId"));
-        clientsTableViewName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        clientsTableViewAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
-        clientsTableViewPhone.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
-        clientsTableView.getItems().clear();
+        clientsTableViewClientId.setCellValueFactory(new PropertyValueFactory<>("clientId")); // 00024123 Set the cell value factory for client IDs
+        clientsTableViewName.setCellValueFactory(new PropertyValueFactory<>("name")); // 00024123 Set the cell value factory for client names
+        clientsTableViewAddress.setCellValueFactory(new PropertyValueFactory<>("address")); // 00024123 Set the cell value factory for client addresses
+        clientsTableViewPhone.setCellValueFactory(new PropertyValueFactory<>("phoneNumber")); // 00024123 Set the cell value factory for client phone numbers
+        clientsTableView.getItems().clear();  // 00024123 Clear the table items
     }
     @FXML
     protected void insert() throws SQLException { // 00041923 method to insert a client
-        if((!nameClientI.getText().equals(""))&&(!lastnameClientI.getText().equals(""))&&(!addressI.getText().equals(""))&&(!phoneNumberI.getText().equals(""))){
+        if((!nameClientI.getText().equals(""))&&(!lastnameClientI.getText().equals(""))&&(!addressI.getText().equals(""))&&(!phoneNumberI.getText().equals(""))){ // 00024123 Check if user didn't miss any inputs
             Connection db = DatabaseConnection.getConnection(); // 00041923 make the connection with the database
             PreparedStatement ps = db.prepareStatement("INSERT INTO Client (name,address,phoneNumber) VALUES (?,?,?)"); //00041923 query to insert another Client into table
-            String fullname = nameClientI.getText() +" " + lastnameClientI.getText();
-            ps.setString(1,fullname); //00041923 put the parameters from the prepareStatement in first index, in this case is the name
-            ps.setString(2, addressI.getText()); //00041923 put the parameters from the prepareStatement in second index, in this case is the address
-            ps.setString(3, phoneNumberI.getText()); //00041923 put the parameters from the prepareStatement in third index, in this case is the phone number
+            String fullname = nameClientI.getText() +" " + lastnameClientI.getText();  // 00024123  Create a String which to set the client's full name
+            ps.setString(1,fullname); //00041923 Put the parameters from the prepareStatement in first index, in this case is the name
+            ps.setString(2, addressI.getText()); //00041923 Put the parameters from the prepareStatement in second index, in this case is the address
+            ps.setString(3, phoneNumberI.getText()); //00041923 Put the parameters from the prepareStatement in third index, in this case is the phone number
             ps.executeUpdate(); // 00041923 execute the previous query
-            nameClientI.setText("");
-            lastnameClientI.setText("");
-            addressI.setText("");
-            phoneNumberI.setText("");
-            if(!clientsTableView.getItems().isEmpty()){
-                show();
+            nameClientI.setText("");  // 00024123 Clear the client's name input
+            lastnameClientI.setText(""); // 00024123 Clear the client's last name input
+            addressI.setText(""); // 00024123 Clear the client's address input
+            phoneNumberI.setText(""); // 00024123 Clear the client's phone number input
+            if(!clientsTableView.getItems().isEmpty()){ // 00024123 Check if the table view has elements
+                show(); // 00024123 Update the table with the new client
             }
-            successfullOperation();
-            db.close(); // 00041923 close de database connection
+            successfullOperation(); // 00024123 Display successfull operation alert
+            db.close(); // 00041923 Close de database connection
         } else {
             emptyOperation();
         }

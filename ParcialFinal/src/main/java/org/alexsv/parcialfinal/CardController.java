@@ -38,11 +38,11 @@ public class CardController extends Controller { //00016023 class of the card-sc
     @FXML
     private ScrollPane dataPane; //00016023 ScrollPane to see the table information
     @FXML
-    private TableView<Card> cardsTableView;
+    private TableView<Card> cardsTableView; // 00024123 TableView to display the cards
     @FXML
-    private TableColumn<Card, Integer> cardsTableViewId;
+    private TableColumn<Card, Integer> cardsTableViewId; // 00024123 TableColumn to display the card IDs
     @FXML
-    private TableColumn<Card, String> cardsTableViewNumber;
+    private TableColumn<Card, String> cardsTableViewNumber; // 00024123 TableColumn to display the client names
     @FXML
     private TableColumn<Card, String> cardsTableViewExpDate;
     @FXML
@@ -146,23 +146,6 @@ public class CardController extends Controller { //00016023 class of the card-sc
             emptyOperation();
         }
     }
-
-    /*@FXML
-    protected void show() throws SQLException { //00016023 method to show the table
-        ArrayList<String> tableData = new ArrayList<>(); //00016023 variable to save the table data
-        Connection db = DatabaseConnection.getConnection(); // 00016023 make the connection with the database
-        Statement st = db.createStatement(); //00016023 create a statement to execute a query
-        ResultSet rs = st.executeQuery("SELECT * FROM Card "); //00016023 execute the query to select all cards
-        while (rs.next()){ //00016023 continues while the table have more data
-            tableData.add("ID: " + rs.getString("clientId") + " | Name: " + rs.getString("name") + " | Address: " + rs.getString("address") + " | Phone Number: " + rs.getString("phoneNumber") + "\n");
-            //(comment from above) 00016023 add to the collection the information of the table with respect to the query
-        }
-        String infoToShow = String.join("\n",tableData); //00016023 join the data collected in a whole String variable
-        Label label = new Label(infoToShow); //00016023 Label to put the information on AnchorPane
-        informationShow.getChildren().add(label); //00016023 add the label with information to the AnchorPane
-        dataPane.setContent(informationShow); // 00016023 add to the ScrollPane the AnchorPane content (the information)
-        db.close(); //00016023 close de database connection
-    }*/
     @FXML
     protected void show() throws SQLException {
         cardsTableView.getItems().clear();
