@@ -67,14 +67,14 @@ public class TransactionController extends Controller{
             ps.setInt(4, Integer.parseInt(clientIdI.getText()));
             ps.setInt(5, Integer.parseInt(cardIdI.getText()));
             ps.executeUpdate();
-            if(!transactionsTableView.getItems().isEmpty()){
-                show();
-            }
             transactionDate.setValue(null);
             amountI.setText("");
             descriptionI.setText("");
             clientIdI.setText("");
             cardIdI.setText("");
+            if(!transactionsTableView.getItems().isEmpty()){
+                show();
+            }
             successfullOperation();
             db.close();
         } else {
@@ -105,7 +105,7 @@ public class TransactionController extends Controller{
                     column = "cardId";
                     break;
             }
-            PreparedStatement ps = db.prepareStatement("UPDATE Transaction SET "+ column + " = ? WHERE clientId = ?");
+            PreparedStatement ps = db.prepareStatement("UPDATE Transaction SET "+ column + " = ? WHERE transactionId = ?");
             ps.setString(1, updateField.getText()); //revisar esto por los tipos de datos ALEX
             ps.setInt(2, Integer.parseInt(transactionIdU.getText()));
             ps.executeUpdate();
@@ -127,13 +127,14 @@ public class TransactionController extends Controller{
         try {
             if(!transactionIdD.getText().equals("")){
                 Connection db = DatabaseConnection.getConnection();
-                Statement statement = db.createStatement();
-                statement.execute("DELETE FROM Transaction WHERE transactionId = " + transactionIdD);
-                successfullOperation();
+                PreparedStatement preparedStatement = db.prepareStatement("DELETE FROM Transaction WHERE transactionId = ?");
+                preparedStatement.setInt(1, Integer.valueOf(transactionIdD.getText()));
+                preparedStatement.executeUpdate();
                 transactionIdD.setText("");
                 if(!transactionsTableView.getItems().isEmpty()){
                     show();
                 }
+                successfullOperation();
                 db.close();
             } else {
                 emptyOperation();
