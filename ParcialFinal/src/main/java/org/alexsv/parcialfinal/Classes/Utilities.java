@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Utilities {
-    private static final String folderPath=""; //00041923 path of the folder in which are going to save the reports
+    private static final String folderPath="Reports"; //00041923 path of the folder in which are going to save the reports
     //still don't have this ↑
     public static java.sql.Date dateFormat(TextField date) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("MM-yyyy"); // 00041923 set the format of the date (month - year)

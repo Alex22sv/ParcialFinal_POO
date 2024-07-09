@@ -57,74 +57,85 @@ public class TransactionController extends Controller{
     }
 
     @FXML
-    protected void insert() throws SQLException {
-        if((transactionDate.getValue()!=null)&&(!amountI.getText().equals(""))&&(!descriptionI.getText().equals(""))&&(!clientIdI.getText().equals(""))&&(!cardIdI.getText().equals(""))){
-            Connection db = DatabaseConnection.getConnection(); // 00041923 make the connection with the database
-            PreparedStatement ps = db.prepareStatement("INSERT INTO Transaction (purchaseDate,totalAmount,description,clientId,cardId) VALUES (?,?,?,?,?)");
-            ps.setDate(1, Date.valueOf(transactionDate.getValue()));
-            ps.setDouble(2, Double.parseDouble(amountI.getText()));
-            ps.setString(3,descriptionI.getText());
-            ps.setInt(4, Integer.parseInt(clientIdI.getText()));
-            ps.setInt(5, Integer.parseInt(cardIdI.getText()));
-            ps.executeUpdate();
-            transactionDate.setValue(null);
-            amountI.setText("");
-            descriptionI.setText("");
-            clientIdI.setText("");
-            cardIdI.setText("");
-            if(!transactionsTableView.getItems().isEmpty()){
-                show();
+    protected void insert(){
+        try { //00041923 tries the code below
+            if ((transactionDate.getValue() != null) && (!amountI.getText().equals("")) && (!descriptionI.getText().equals("")) && (!clientIdI.getText().equals("")) && (!cardIdI.getText().equals(""))) {
+                Connection db = DatabaseConnection.getConnection(); // 00041923 make the connection with the database
+                PreparedStatement ps = db.prepareStatement("INSERT INTO Transaction (purchaseDate,totalAmount,description,clientId,cardId) VALUES (?,?,?,?,?)");
+                ps.setDate(1, Date.valueOf(transactionDate.getValue()));
+                ps.setDouble(2, Double.parseDouble(amountI.getText()));
+                ps.setString(3, descriptionI.getText());
+                ps.setInt(4, Integer.parseInt(clientIdI.getText()));
+                ps.setInt(5, Integer.parseInt(cardIdI.getText()));
+                ps.executeUpdate();
+                transactionDate.setValue(null);
+                amountI.setText("");
+                descriptionI.setText("");
+                clientIdI.setText("");
+                cardIdI.setText("");
+                if (!transactionsTableView.getItems().isEmpty()) {
+                    show();
+                }
+                successfullOperation();
+                db.close();
+            } else {
+                emptyOperation();
             }
-            successfullOperation();
-            db.close();
-        } else {
-            emptyOperation();
+        }catch (SQLException e){ //00041923 in case an error occurs in the sql execute
+            failedOperation(); //000 41923 displays an alert
+        }catch (NumberFormatException e){ //00041923 in case an error occurs in the id verification
+            typeError(); //000 41923 displays an alert
         }
     }
 
     @FXML
-    protected void update() throws SQLException {
-        if((transactionUpdateChoice.getValue()!=null)&&(!updateField.getText().equals(""))&&(!transactionIdU.getText().equals(""))){
-            Connection db = DatabaseConnection.getConnection();
-            String column = "";
+    protected void update(){
+        try { //00041923 tries the code below
+            if ((transactionUpdateChoice.getValue() != null) && (!updateField.getText().equals("")) && (!transactionIdU.getText().equals(""))) {
+                Connection db = DatabaseConnection.getConnection();
+                String column = "";
 
-            switch (transactionUpdateChoice.getValue()){
-                case "Purchase Date":
-                    column = "purchaseDate";
-                    break;
-                case "Total Amount":
-                    column = "totalAmount";
-                    break;
-                case "Description":
-                    column = "description";
-                    break;
-                case "Client Id":
-                    column = "clientId";
-                    break;
-                case "Card Id":
-                    column = "cardId";
-                    break;
+                switch (transactionUpdateChoice.getValue()) {
+                    case "Purchase Date":
+                        column = "purchaseDate";
+                        break;
+                    case "Total Amount":
+                        column = "totalAmount";
+                        break;
+                    case "Description":
+                        column = "description";
+                        break;
+                    case "Client Id":
+                        column = "clientId";
+                        break;
+                    case "Card Id":
+                        column = "cardId";
+                        break;
+                }
+                PreparedStatement ps = db.prepareStatement("UPDATE Transaction SET " + column + " = ? WHERE clientId = ?");
+                ps.setString(2, transactionIdU.getText());
+                //implementar la modificacion segun columna
+                transactionUpdateChoice.setValue(null);
+                updateField.setText("");
+                transactionIdU.setText("");
+                if (!transactionsTableView.getItems().isEmpty()) {
+                    show();
+                }
+                successfullOperation();
+                db.close();
+            } else {
+                emptyOperation();
             }
-            PreparedStatement ps = db.prepareStatement("UPDATE Transaction SET "+ column + " = ? WHERE transactionId = ?");
-            ps.setString(1, updateField.getText()); //revisar esto por los tipos de datos ALEX
-            ps.setInt(2, Integer.parseInt(transactionIdU.getText()));
-            ps.executeUpdate();
-            transactionUpdateChoice.setValue(null);
-            updateField.setText("");
-            transactionIdU.setText("");
-            if(!transactionsTableView.getItems().isEmpty()){
-                show();
-            }
-            successfullOperation();
-            db.close();
-        } else {
-            emptyOperation();
+        }catch (SQLException e){ //00041923 in case an error occurs in the sql execute
+            failedOperation(); //000 41923 displays an alert
+        }catch (NumberFormatException e){ //00041923 in case an error occurs in the id verification
+            typeError(); //000 41923 displays an alert
         }
     }
 
     @FXML
     protected void delete() {
-        try {
+        try { //00041923 tries the code below
             if(!transactionIdD.getText().equals("")){
                 Connection db = DatabaseConnection.getConnection();
                 PreparedStatement preparedStatement = db.prepareStatement("DELETE FROM Transaction WHERE transactionId = ?");
@@ -134,17 +145,14 @@ public class TransactionController extends Controller{
                 if(!transactionsTableView.getItems().isEmpty()){
                     show();
                 }
-                successfullOperation();
                 db.close();
             } else {
                 emptyOperation();
             }
-        } catch(SQLSyntaxErrorException e){
-            failedOperation();
-        } catch(SQLException e){
-            failedOperation();
-        } catch(Exception e){
-            failedOperation();
+        }catch (SQLException e){ //00041923 in case an error occurs in the sql execute
+            failedOperation(); //000 41923 displays an alert
+        }catch (NumberFormatException e){ //00041923 in case an error occurs in the id verification
+            typeError(); //000 41923 displays an alert
         }
     }
 

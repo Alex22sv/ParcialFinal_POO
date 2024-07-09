@@ -86,4 +86,35 @@ public class Controller {//00016023 - General controller who generates the navig
         alert.setHeaderText("Please fulfill all requirements."); // 00024123 Set the alert's header text
         alert.showAndWait();  // 00024123 Display the alert
     }
+
+    @FXML
+    public void typeError(){ // 00041923 this method displays an alert when the type doesn't match
+        Alert alert = new Alert(Alert.AlertType.WARNING); //00041923 create a new alert
+        alert.setTitle("Error!"); //00041923 set the alert title
+        alert.setHeaderText("Please put the right type on requirements"); //00041923 set the text on the alert
+        alert.showAndWait(); //00041923 Display the alert
+    }
+
+    @FXML
+    public void fileCreator(){ //00041923 this method displays an alert when a file isn't created
+        Alert alert = new Alert(Alert.AlertType.ERROR); // 00041923 create a new alert
+        alert.setTitle("Error"); //00041923 set the alert title
+        alert.setHeaderText("Something goes wrong with the report file"); //00041923 set the text on the alert
+        alert.showAndWait(); // 00041923 displays the alert
+    }
+
+    @FXML
+    public void fileCreated(){ //00041923 this method displays an alert when a file is created
+        Alert alert = new Alert(Alert.AlertType.INFORMATION); // 00041923 create a new file
+        alert.setTitle("Success"); //00041923 set the alert title
+        alert.setHeaderText("The file was created successfully"); //00041923 set the text on the alert
+        alert.showAndWait(); //00041923 displays the alert
+    }
+    @FXML
+    public void emptyData(){ //00041923 this method displays an alert when there is nothing to write in a file
+        Alert alert = new Alert(Alert.AlertType.INFORMATION); //00041923 create a new alert
+        alert.setTitle("Advertise"); //00041923 set the alert title
+        alert.setHeaderText("There is nothing to show and save in a file"); //0041923 set the text on alert
+        alert.showAndWait(); //00041923 displays the alert
+    }
 }
