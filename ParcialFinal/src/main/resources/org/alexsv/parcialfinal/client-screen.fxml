@@ -175,9 +175,9 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <VBox alignment="TOP_CENTER" prefHeight="197.0" prefWidth="554.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="207.0" prefWidth="635.0">
                      <children>
-                        <VBox alignment="CENTER" prefHeight="62.0" prefWidth="554.0">
+                        <VBox alignment="CENTER" prefHeight="20.0" prefWidth="635.0">
                            <children>
                               <Label text="Clients section">
                                  <font>
@@ -189,15 +189,30 @@
                            <children>
                               <VBox prefHeight="203.0" prefWidth="554.0">
                                  <children>
-                                    <HBox alignment="CENTER" prefHeight="187.0" prefWidth="554.0">
+                                    <HBox alignment="CENTER" prefHeight="187.0" prefWidth="635.0">
                                        <children>
                                           <VBox alignment="TOP_CENTER" prefHeight="174.0" prefWidth="173.0">
                                              <children>
-                                                <Label text="Add new client" />
-                                                <TextField fx:id="nameClientI" maxWidth="125.0" promptText="First name" />
-                                                <TextField fx:id="lastnameClientI" maxWidth="125.0" promptText="Last name" />
-                                                <TextField fx:id="addressI" maxWidth="125.0" promptText="Address" />
-                                                <TextField fx:id="phoneNumberI" maxWidth="125.0" promptText="Phone number" />
+                                                <Label text="Add new client">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin></Label>
+                                                <TextField fx:id="nameClientI" maxWidth="125.0" promptText="First name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <TextField fx:id="lastnameClientI" maxWidth="125.0" promptText="Last name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <TextField fx:id="addressI" maxWidth="125.0" promptText="Address">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <TextField fx:id="phoneNumberI" maxWidth="125.0" promptText="Phone number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
                                                 <Button mnemonicParsing="false" onAction="#insert" text="Add" />
                                              </children>
                                           </VBox>
@@ -219,7 +234,7 @@
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </ChoiceBox>
-                                                <TextField fx:id="updateField" maxWidth="92.0" prefHeight="25.0" prefWidth="92.0" promptText="Info to change">
+                                                <TextField fx:id="updateField" maxWidth="151.0" prefHeight="25.0" prefWidth="151.0" promptText="Info to change">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
