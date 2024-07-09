@@ -90,8 +90,12 @@ public class ReportCController extends Controller { // 00024123 class of the rep
                     infoToWrite2 = debitTitle + debitInfo; //00041923 the second statement will have the title and the debit cards
                 }
                 String wholeInfo = infoToWrite1 + infoToWrite2; //00041923 variable with both statement
-                Utilities.fileCreator("C", wholeInfo); // 00041923 make a File with code name "C" and the content is the previous variable
-                fileCreated(); // 00041923 displays an alert
+                if (Utilities.exists(Integer.parseInt(clientIDCardsAssociatedTextField.getText()))) { //00041923 in case the client id exists
+                    Utilities.fileCreator("C", wholeInfo); // 00041923 make a File with code name "C" and the content is the previous variable
+                    fileCreated(); // 00041923 displays an alert
+                }else { //00041923 in case the id don't exist
+                    fileCreator(); //00041923 displays an alert
+                }
                 db.close(); //00049123 close the connection with the database
             } else { // 00024123 The user forgot to fulfill all fields
                 emptyOperation(); // 00024123 Display an alert to let the user know they are missing empty fields

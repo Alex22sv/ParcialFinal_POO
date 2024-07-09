@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Date;
+import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -22,7 +22,7 @@ public class Utilities { // 00024123 Utility class which contains static methods
     }
     public static void fileCreator(String code, String data) throws IOException {
         LocalDateTime currentDateTime = LocalDateTime.now(); //00041923 get the local date (day, month, year and hour)
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //00041923 set the format of the day
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss"); //00041923 set the format of the day
         String formattedDateTime = currentDateTime.format(formatter); //00041923 convert the time to a String with the previous format
         String nameFile = code +" " + formattedDateTime + ".txt"; //00041923 the file name is a code with the current date
         File newFile = new File(folderPath,nameFile); //00041923 make a new file in the folder path
@@ -39,5 +39,18 @@ public class Utilities { // 00024123 Utility class which contains static methods
     public static String fixCardNumberFormat(String cardNumber){ //00024123 this method fixes the card number format (when the user separates the numbers with hyphens)
         String fixedCardNumber = cardNumber.replace("-", " "); // 00024123 replace the hyphens with spaces in the credit card number
         return fixedCardNumber; // 00024123 return the fixed credit card number
+    }
+
+    public static boolean exists(int idSearch) throws SQLException {
+        Connection db = DatabaseConnection.getConnection();
+        PreparedStatement ps = db.prepareStatement("SELECT EXISTS(SELECT 1 FROM Client WHERE clientId = ?)");
+        ps.setInt(1,idSearch);
+        ResultSet rs = ps.executeQuery();
+        boolean exist = false;
+        if (rs.next()){
+            exist = rs.getBoolean(1);
+        }
+        db.close();
+        return exist;
     }
 }
