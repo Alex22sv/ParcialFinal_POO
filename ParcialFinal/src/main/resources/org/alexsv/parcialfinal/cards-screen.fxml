@@ -196,13 +196,31 @@
                                        <children>
                                           <VBox alignment="TOP_CENTER" prefHeight="220.0" prefWidth="173.0">
                                              <children>
-                                                <Label text="Add new card" />
-                                                <TextField maxWidth="75.0" promptText="Client's ID" fx:id="idClientI" />
-                                                <ComboBox prefWidth="150.0" promptText="Type of card" fx:id="cardTypeI"/>
-                                                <TextField maxWidth="125.0" promptText="Facilitator" fx:id="facilitatorI" />
-                                                <TextField maxWidth="125.0" promptText="Number" fx:id="cardNumberI"/>
-                                                <DatePicker maxWidth="125.0" promptText="Exp Date" fx:id="dateI"/>
-                                                <Button mnemonicParsing="false" onAction="#insert" text="Add"/>
+                                                <Label text="Add new card">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin></Label>
+                                                <TextField fx:id="idClientI" maxWidth="75.0" promptText="Client's ID">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <ComboBox fx:id="cardTypeI" prefWidth="150.0" promptText="Type of card">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></ComboBox>
+                                                <TextField fx:id="facilitatorI" maxWidth="125.0" promptText="Facilitator">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <TextField fx:id="cardNumberI" maxWidth="183.0" prefHeight="25.0" prefWidth="183.0" promptText="Number">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <DatePicker fx:id="dateI" maxWidth="125.0" promptText="Exp Date">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></DatePicker>
+                                                <Button mnemonicParsing="false" onAction="#insert" text="Add" />
                                              </children>
                                           </VBox>
                                           <VBox alignment="TOP_CENTER" prefHeight="238.0" prefWidth="197.0">
@@ -212,23 +230,23 @@
                                                       <Insets bottom="10.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <TextField maxWidth="75.0" promptText="Card's ID" fx:id="idCardU"/>
+                                                <TextField fx:id="idCardU" maxWidth="75.0" promptText="Card's ID" />
                                                 <Label text="Select info to change">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <ChoiceBox prefWidth="150.0" fx:id="cardUpdateChoice">
+                                                <ChoiceBox fx:id="cardUpdateChoice" prefWidth="150.0">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </ChoiceBox>
-                                                <TextField maxWidth="92.0" prefHeight="25.0" prefWidth="92.0" promptText="Info to change" fx:id="updateField">
+                                                <TextField fx:id="updateField" maxWidth="149.0" prefHeight="25.0" prefWidth="149.0" promptText="Info to change">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <Button mnemonicParsing="false" text="Change" onAction="#update"/>
+                                                <Button mnemonicParsing="false" onAction="#update" text="Change" />
                                              </children>
                                           </VBox>
                                           <VBox alignment="TOP_CENTER" prefHeight="157.0" prefWidth="157.0">
@@ -238,12 +256,12 @@
                                                       <Insets bottom="10.0" />
                                                    </VBox.margin>
                                                 </Label>
-                                                <TextField maxWidth="75.0" promptText="Card's ID" fx:id="idCardD">
+                                                <TextField fx:id="idCardD" maxWidth="75.0" promptText="Card's ID">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </TextField>
-                                                <Button mnemonicParsing="false" text="Delete" onAction="#delete">
+                                                <Button mnemonicParsing="false" onAction="#delete" text="Delete">
                                                    <VBox.margin>
                                                       <Insets bottom="15.0" />
                                                    </VBox.margin>
