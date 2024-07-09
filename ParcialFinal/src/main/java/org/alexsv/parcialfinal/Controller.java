@@ -13,42 +13,42 @@ import java.io.IOException;
 public class Controller {//00016023 - General controller who generates the navigation between windows
     @FXML//00016023 - Define the function as an option in fxml file
     public void openHome(ActionEvent event) throws IOException {//00016023 - Option who calls the Home window
-        changeScene(event, "welcome-screen.fxml", "APP");//00016023 - makes the change for the new window
+        changeScene(event, "welcome-screen.fxml", "BCN");//00016023 - makes the change for the new window
     }
 
     @FXML//00016023 - Define the function as an option in fxml file
     private void openClient(ActionEvent event) throws IOException {//00016023 - Option who calls the Client window
-        changeScene(event, "client-screen.fxml", "APP");//00016023 - makes the change for the new window
+        changeScene(event, "client-screen.fxml", "BCN");//00016023 - makes the change for the new window
     }
 
     @FXML//00016023 - Define the function as an option in fxml file
     private void openTransaction(ActionEvent event) throws IOException {//00016023 - Option who calls the Transaction window
-        changeScene(event, "transactions-screen.fxml", "APP");//00016023 - makes the change for the new window
+        changeScene(event, "transactions-screen.fxml", "BCN");//00016023 - makes the change for the new window
     }
 
     @FXML//00016023 - Define the function as an option in fxml file
     private void openCards(ActionEvent event) throws IOException {//00016023 - Option who calls the Card window
-        changeScene(event, "cards-screen.fxml", "APP");//00016023 - makes the change for the new window
+        changeScene(event, "cards-screen.fxml", "BCN");//00016023 - makes the change for the new window
     }
 
     @FXML//00016023 - Define the function as an option in fxml file
     private void openA(ActionEvent event) throws IOException {//00016023 - Option who calls the Case A window
-        changeScene(event, "purchases-made-screen.fxml", "APP");//00016023 - makes the change for the new window
+        changeScene(event, "purchases-made-screen.fxml", "BCN");//00016023 - makes the change for the new window
     }
 
     @FXML//00016023 - Define the function as an option in fxml file
     private void openB(ActionEvent event) throws IOException {//00016023 - Option who calls the Case B window
-        changeScene(event, "money-spent-screen.fxml", "APP");//00016023 - makes the change for the new window
+        changeScene(event, "money-spent-screen.fxml", "BCN");//00016023 - makes the change for the new window
     }
 
     @FXML//00016023 - Define the function as an option in fxml file
     private void openC(ActionEvent event) throws IOException {//00016023 - Option who calls the Case C window
-        changeScene(event, "client-cards-screen.fxml", "APP");//00016023 - makes the change for the new window
+        changeScene(event, "client-cards-screen.fxml", "BCN");//00016023 - makes the change for the new window
     }
 
     @FXML//00016023 - Define the function as an option in fxml file
     private void openD(ActionEvent event) throws IOException {//00016023 - Option who calls the Case D window
-        changeScene(event, "purchases-card-facilitator.fxml", "APP");//00016023 - makes the change for the new window
+        changeScene(event, "purchases-card-facilitator.fxml", "BCN");//00016023 - makes the change for the new window
     }
 
     @FXML//00016023 - Define the function as an option in fxml file
