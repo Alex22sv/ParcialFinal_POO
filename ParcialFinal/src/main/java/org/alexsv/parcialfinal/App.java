@@ -15,8 +15,7 @@ public class App extends Application {//00016023 - main class who create the wel
         stage.resizableProperty().setValue(false);//00016023 - Define the resizable property as false
         stage.show();//00016023 - Show the window
     }
-
-    public static void main(String[] args) {
-        launch();
+    public static void main(String[] args) { // 00024123 Main method
+        launch(); // 0002413 Launch a standalone application
     }
 }
