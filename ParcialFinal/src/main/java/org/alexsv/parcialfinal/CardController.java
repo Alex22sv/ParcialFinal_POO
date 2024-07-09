@@ -92,7 +92,6 @@ public class CardController extends Controller { //00016023 class of the card-sc
             typeError(); //00041923 displays an alert
         }
     }
-
     @FXML
     protected void update() { //00016023 method to update a card
         try { //00041923 tries the code below

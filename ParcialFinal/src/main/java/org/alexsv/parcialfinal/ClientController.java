@@ -57,7 +57,6 @@ public class ClientController extends Controller { //00041923 class of the clien
                 ps.setString(2, addressI.getText()); //00041923 put the parameters from the prepareStatement in second index, in this case is the address
                 ps.setString(3, phoneNumberI.getText()); //00041923 put the parameters from the prepareStatement in third index, in this case is the phone number
                 ps.executeUpdate(); // 00041923 execute the previous query
-                ps.executeUpdate(); // 00041923 execute the previous query
                 nameClientI.setText("");  // 00024123 Clear the client's name input
                 lastnameClientI.setText(""); // 00024123 Clear the client's last name input
                 addressI.setText(""); // 00024123 Clear the client's address input

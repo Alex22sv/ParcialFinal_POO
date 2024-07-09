@@ -16,51 +16,51 @@ public class Transaction { // 00067323 Definition of the Transaction class
         this.cardId = cardId; // 00067323 Initializing cardId with parameter value
     }
 
-    public Integer getTransactionId() {
+    public Integer getTransactionId() { // 00024123 Get the transaction ID
         return transactionId; // 00067323 Getter for transaction's ID
     }
 
-    public void setTransactionId(Integer transactionId) {
+    public void setTransactionId(Integer transactionId) { // 00024123 Set the transaction ID
         this.transactionId = transactionId; // 00067323 Setter for transaction's ID
     }
 
-    public String getPurchaseDate() {
+    public String getPurchaseDate() { // 00024123 Get the purchase date
         return purchaseDate; // 00067323 Getter for purchase date
     }
 
-    public void setPurchaseDate(String purchaseDate) {
+    public void setPurchaseDate(String purchaseDate) { // 00024123 Set the purchase date
         this.purchaseDate = purchaseDate; // 00067323 Setter for purchase date
     }
 
-    public String getTotalAmount() {
+    public String getTotalAmount() { // 00024123 Get the total amount
         return totalAmount; // 00067323 Getter for total amount
     }
 
-    public void setTotalAmount(String totalAmount) {
+    public void setTotalAmount(String totalAmount) { // 00024123 Set the total amount
         this.totalAmount = totalAmount; // 00067323 Setter for total amount
     }
 
-    public String getDescription() {
+    public String getDescription() { // 00024123 Get the description
         return description; // 00067323 Getter for description
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description) { // 00024123 Set the description
         this.description = description; // 00067323 Setter for description
     }
 
-    public Integer getClientId() {
+    public Integer getClientId() { // 00024123 Get the client ID
         return clientId; // 00067323 Getter for associated client ID
     }
 
-    public void setClientId(Integer clientId) {
+    public void setClientId(Integer clientId) { // 00024123 Set the client ID
         this.clientId = clientId; // 00067323 Setter for associated client ID
     }
 
-    public Integer getCardId() {
+    public Integer getCardId() { // 00024123 Get the card ID
         return cardId; // 00067323 Getter for associated card ID
     }
 
-    public void setCardId(Integer cardId) {
+    public void setCardId(Integer cardId) { // 00024123 Set the card ID
         this.cardId = cardId; // 00067323 Setter for associated card ID
     }
 }

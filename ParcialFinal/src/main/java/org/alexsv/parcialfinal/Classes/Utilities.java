@@ -15,12 +15,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Utilities { // 00024123 Utility class which contains static methods
     private static final String folderPath="./src/main/resources/reports/"; //00041923 path of the folder in which are going to save the reports
-    public static java.sql.Date dateFormat(TextField date) throws ParseException {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-yyyy"); // 00041923 set the format of the date (month - year)
-        java.util.Date dateText = dateFormat.parse(date.getText()); // 0041923 make the TextArea text a date type
-        return new Date(dateText.getTime()); // 00041923 make the previous java date type to a sql date type and return that date
-    }
-    public static void fileCreator(String code, String data) throws IOException {
+    public static void fileCreator(String code, String data) throws IOException { // 00024123 this method helps you create a txt file
         LocalDateTime currentDateTime = LocalDateTime.now(); //00041923 get the local date (day, month, year and hour)
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //00041923 set the format of the day
         String formattedDateTime = currentDateTime.format(formatter); //00041923 convert the time to a String with the previous format

@@ -152,7 +152,7 @@ public class TransactionController extends Controller{ //00024123 class of the t
         }
     }
     @FXML
-    protected void show() {
+    protected void show() { //00041923 method to show the table
         try { //00041923 tries the code below
             transactionsTableView.getItems().clear(); // 00024123 Clear the table which could contain old data
             Connection db = DatabaseConnection.getConnection(); // 00024123 make the connection with the database

@@ -87,7 +87,7 @@ public class Controller {//00016023 - General controller who generates the navig
         alert.showAndWait();  // 00024123 Display the alert
     }
 
-    @FXML
+    @FXML//00016023 - Define the function as an option in fxml file
     public void typeError(){ // 00041923 this method displays an alert when the type doesn't match
         Alert alert = new Alert(Alert.AlertType.WARNING); //00041923 create a new alert
         alert.setTitle("Error!"); //00041923 set the alert title
@@ -95,7 +95,7 @@ public class Controller {//00016023 - General controller who generates the navig
         alert.showAndWait(); //00041923 Display the alert
     }
 
-    @FXML
+    @FXML//00016023 - Define the function as an option in fxml file
     public void fileCreator(){ //00041923 this method displays an alert when a file isn't created
         Alert alert = new Alert(Alert.AlertType.ERROR); // 00041923 create a new alert
         alert.setTitle("Error"); //00041923 set the alert title
@@ -103,14 +103,14 @@ public class Controller {//00016023 - General controller who generates the navig
         alert.showAndWait(); // 00041923 displays the alert
     }
 
-    @FXML
+    @FXML//00016023 - Define the function as an option in fxml file
     public void fileCreated(){ //00041923 this method displays an alert when a file is created
         Alert alert = new Alert(Alert.AlertType.INFORMATION); // 00041923 create a new file
         alert.setTitle("Success"); //00041923 set the alert title
         alert.setHeaderText("The file was created successfully"); //00041923 set the text on the alert
         alert.showAndWait(); //00041923 displays the alert
     }
-    @FXML
+    @FXML//00016023 - Define the function as an option in fxml file
     public void emptyData(){ //00041923 this method displays an alert when there is nothing to write in a file
         Alert alert = new Alert(Alert.AlertType.INFORMATION); //00041923 create a new alert
         alert.setTitle("Advertise"); //00041923 set the alert title
