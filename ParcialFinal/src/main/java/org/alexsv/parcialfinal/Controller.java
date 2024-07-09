@@ -80,10 +80,10 @@ public class Controller {//00016023 - General controller who generates the navig
         alert.showAndWait();  // 00024123 Display the alert
     }
     @FXML//00016023 - Define the function as an option in fxml file
-    public void emptyOperation(){ // 00024123 this method displays an alert when the operation is missing requirements
+    public void emptyOperation(){ // 00024123 this method displays an alert when the operation is missing fields
         Alert alert = new Alert(Alert.AlertType.WARNING); // 00024123 Create a new alert with the alert type
         alert.setTitle("Warning!"); // 00024123 Set the alert's title
-        alert.setHeaderText("Please fulfill all requirements."); // 00024123 Set the alert's header text
+        alert.setHeaderText("Please fulfill all fields."); // 00024123 Set the alert's header text
         alert.showAndWait();  // 00024123 Display the alert
     }
 
@@ -91,7 +91,7 @@ public class Controller {//00016023 - General controller who generates the navig
     public void typeError(){ // 00041923 this method displays an alert when the type doesn't match
         Alert alert = new Alert(Alert.AlertType.WARNING); //00041923 create a new alert
         alert.setTitle("Error!"); //00041923 set the alert title
-        alert.setHeaderText("Please put the right type on requirements"); //00041923 set the text on the alert
+        alert.setHeaderText("Please put the right type on fields"); //00041923 set the text on the alert
         alert.showAndWait(); //00041923 Display the alert
     }
 
