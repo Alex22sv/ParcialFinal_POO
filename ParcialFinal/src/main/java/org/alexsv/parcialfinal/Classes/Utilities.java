@@ -41,16 +41,16 @@ public class Utilities { // 00024123 Utility class which contains static methods
         return fixedCardNumber; // 00024123 return the fixed credit card number
     }
 
-    public static boolean exists(int idSearch) throws SQLException {
-        Connection db = DatabaseConnection.getConnection();
-        PreparedStatement ps = db.prepareStatement("SELECT EXISTS(SELECT 1 FROM Client WHERE clientId = ?)");
-        ps.setInt(1,idSearch);
-        ResultSet rs = ps.executeQuery();
-        boolean exist = false;
-        if (rs.next()){
-            exist = rs.getBoolean(1);
+    public static boolean exists(int idSearch) throws SQLException { //00041923 this method verify if the id to search exists
+        Connection db = DatabaseConnection.getConnection(); //00041923 make the database connection
+        PreparedStatement ps = db.prepareStatement("SELECT EXISTS(SELECT 1 FROM Client WHERE clientId = ?)"); //00041923 query to execute where verify if the client exists
+        ps.setInt(1,idSearch); //00041923 put the parameters from the prepareStatement in first index, in this case an id to search
+        ResultSet rs = ps.executeQuery(); //00041923 execute the previous query
+        boolean exist = false; //00041923 variable that represent the exists status
+        if (rs.next()){ //00041923 if the result has the data
+            exist = rs.getBoolean(1); //00041923 sets the value of the previous variable to true
         }
-        db.close();
-        return exist;
+        db.close(); //00041923 close the database connection
+        return exist; //00041923 return the variable
     }
 }
