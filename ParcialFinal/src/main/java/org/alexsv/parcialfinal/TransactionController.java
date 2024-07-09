@@ -143,9 +143,10 @@ public class TransactionController extends Controller{
                 preparedStatement.setInt(1, Integer.valueOf(transactionIdD.getText()));
                 preparedStatement.executeUpdate();
                 transactionIdD.setText("");
-                if(!transactionsTableView.getItems().isEmpty()){
+                if (!transactionsTableView.getItems().isEmpty()) {
                     show();
                 }
+                successfullOperation();
                 db.close();
             } else {
                 emptyOperation();
