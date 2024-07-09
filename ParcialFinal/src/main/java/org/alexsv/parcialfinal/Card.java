@@ -1,67 +1,66 @@
 package org.alexsv.parcialfinal;
+public class Card { //00067323 Definition of the card class
+    private Integer cardId; // 00067323 Declaring private Integer for card's ID
+    private String cardNumber; // 00067323 Declaring private String for card number
+    private String expirationDate; // 00067323 Declaring private String for expiration date
+    private String cardType; // 00067323 Declaring private String for card type
+    private String facilitator; // 00067323 Declaring private String for card facilitator
+    private Integer clientId; // 00067323 Declaring private Integer for associated client ID
 
-public class Card {
-    private Integer cardId;
-    private String cardNumber;
-    private String expirationDate;
-    private String cardType;
-    private String facilitator;
-    private Integer clientId;
-
-    public Card(Integer cardId, String cardNumber, String expirationDate, String cardType, String facilitator, Integer clientId) {
-        this.cardId = cardId;
-        this.cardNumber = cardNumber;
-        this.expirationDate = expirationDate;
-        this.cardType = cardType;
-        this.facilitator = facilitator;
-        this.clientId = clientId;
+    public Card(Integer cardId, String cardNumber, String expirationDate, String cardType, String facilitator, Integer clientId) {         // 00067323 Constructor initializing cardId, cardNumber, expirationDate, cardType, facilitator, clientId
+        this.cardId = cardId; // 00067323 Initializing cardId with parameter value
+        this.cardNumber = cardNumber; // 00067323 Initializing cardNumber with parameter value
+        this.expirationDate = expirationDate; // 00067323 Initializing expirationDate with parameter value
+        this.cardType = cardType; // 00067323 Initializing cardType with parameter value
+        this.facilitator = facilitator; // 00067323 Initializing facilitator with parameter value
+        this.clientId = clientId; // 00067323 Initializing clientId with parameter value
     }
 
     public Integer getCardId() {
-        return cardId;
+        return cardId; // 00067323 Getter for card's ID
     }
 
     public void setCardId(Integer cardId) {
-        this.cardId = cardId;
+        this.cardId = cardId; // 00067323 Setter for card's ID
     }
 
     public String getCardNumber() {
-        return cardNumber;
+        return cardNumber; // 00067323 Getter for card number
     }
 
     public void setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
+        this.cardNumber = cardNumber; // 00067323 Setter for card number
     }
 
     public String getExpirationDate() {
-        return expirationDate;
+        return expirationDate; // 00067323 Getter for expiration date
     }
 
     public void setExpirationDate(String expirationDate) {
-        this.expirationDate = expirationDate;
+        this.expirationDate = expirationDate; // 00067323 Setter for expiration date
     }
 
     public String getCardType() {
-        return cardType;
+        return cardType; // 00067323 Getter for card type
     }
 
     public void setCardType(String cardType) {
-        this.cardType = cardType;
+        this.cardType = cardType; // 00067323 Setter for card type
     }
 
     public String getFacilitator() {
-        return facilitator;
+        return facilitator; // 00067323 Getter for card facilitator
     }
 
     public void setFacilitator(String facilitator) {
-        this.facilitator = facilitator;
+        this.facilitator = facilitator; // 00067323 Setter for card facilitator
     }
 
     public Integer getClientId() {
-        return clientId;
+        return clientId; // 00067323 Getter for associated client ID
     }
 
     public void setClientId(Integer clientId) {
-        this.clientId = clientId;
+        this.clientId = clientId; // 00067323 Setter for associated client ID
     }
 }
