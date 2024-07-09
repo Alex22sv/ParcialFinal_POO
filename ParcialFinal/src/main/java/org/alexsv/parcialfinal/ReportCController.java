@@ -59,9 +59,9 @@ public class ReportCController extends Controller {
                 } else if (creditData.size() >= debitData.size()) {
                     for (int i = 0; i < creditData.size(); i++) {
                         ReportC reportC = null;
-                        if (debitData.isEmpty() && i == 0) {
+                        if ((debitData.isEmpty()) && (i == 0)) {
                             reportC = new ReportC(creditData.get(i), "N/A");
-                        } else if (debitData.isEmpty() && i >= 0) {
+                        } else if ((i>=debitData.size()) && (i > 0)) {
                             reportC = new ReportC(creditData.get(i), "");
                         } else {
                             reportC = new ReportC(creditData.get(i), debitData.get(i));
@@ -71,10 +71,11 @@ public class ReportCController extends Controller {
                 } else {
                     for (int i = 0; i < debitData.size(); i++) {
                         ReportC reportC = null;
-                        if (creditData.isEmpty() && i == 0) {
+                        if ((creditData.isEmpty()) && (i == 0)) {
                             reportC = new ReportC("N/A", debitData.get(i));
-                        } else if (creditData.isEmpty() && i >= 0) {
+                        } else if ((i>=creditData.size()) && (i > 0)) {
                             reportC = new ReportC("", debitData.get(i));
+
                         } else {
                             reportC = new ReportC(creditData.get(i), debitData.get(i));
                         }
@@ -104,6 +105,7 @@ public class ReportCController extends Controller {
         }catch (NumberFormatException e){ //00041923 in case an error occurs in the id verification
             typeError(); //00041923 displays an alert
         }catch (IndexOutOfBoundsException e){ //00041923 in case an error occurs with an index in a collection
+            failedOperation(); //00041923 displays an alert
         }
     }
 

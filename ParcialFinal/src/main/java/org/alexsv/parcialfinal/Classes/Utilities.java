@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Utilities {
-    private static final String folderPath="Reports"; //00041923 path of the folder in which are going to save the reports
+    private static final String folderPath="./src/main/resources/reports/"; //00041923 path of the folder in which are going to save the reports
     //still don't have this ↑
     public static java.sql.Date dateFormat(TextField date) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("MM-yyyy"); // 00041923 set the format of the date (month - year)
@@ -24,7 +24,7 @@ public class Utilities {
 
     public static void fileCreator(String code, String data) throws IOException {
         LocalDateTime currentDateTime = LocalDateTime.now(); //00041923 get the local date (day, month, year and hour)
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH_mm_ss"); //00041923 set the format of the day
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //00041923 set the format of the day
         String formattedDateTime = currentDateTime.format(formatter); //00041923 convert the time to a String with the previous format
         String nameFile = code +" " + formattedDateTime ; //00041923 the file name is a code with the current date
         File newFile = new File(folderPath,nameFile); //00041923 make a new file in the folder path

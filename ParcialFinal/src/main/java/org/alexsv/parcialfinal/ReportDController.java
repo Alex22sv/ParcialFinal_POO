@@ -27,7 +27,7 @@ public class ReportDController extends Controller {
     @FXML
     private TableColumn<ReportD, Integer> totalPurchasesFrompurchasesWithFacilitatorTableColumn;
     @FXML
-    private TableColumn<ReportD, Double> amountSpentFrompurchasesWithFacilitatorTableColumn;
+    private TableColumn<ReportD, String> amountSpentFrompurchasesWithFacilitatorTableColumn;
 
     @FXML
     private void reportD(){ //00041923 method to create the D report with help of a button
@@ -47,7 +47,7 @@ public class ReportDController extends Controller {
                 ps.setString(1, facilitatorTextField.getText()); //00041923 put the parameters from the prepareStatement in first index, in this case is a facilitator
                 ResultSet rs = ps.executeQuery(); //00041923 execute the previous query
                 while (rs.next()) { // 00041923 continues while the table have more data
-                    ReportD reportD = new ReportD(rs.getInt("clientId"), rs.getString("name"), rs.getInt("purchases"), rs.getDouble("totalAmount"));
+                    ReportD reportD = new ReportD(rs.getInt("clientId"), rs.getString("name"), rs.getInt("purchases"), "$"+rs.getString("totalAmount"));
                     purchasesWithFacilitatorTable.getItems().add(reportD);
 
                     facilitatorData.add("Client: " + rs.getString("Client.name") + " Card number: " + Utilities.censorCardNumber(rs.getString("Card.cardNumber"))
