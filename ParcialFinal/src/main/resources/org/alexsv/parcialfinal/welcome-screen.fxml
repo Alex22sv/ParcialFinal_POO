@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.Controller">
+   <children>
+      <HBox prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <VBox prefHeight="500.0" prefWidth="267.0" style="-fx-background-color: #305684;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="164.0" prefWidth="250.0">
+                     <children>
+                        <ImageView fitHeight="133.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="338.0" prefWidth="250.0">
+                     <children>
+                        <HBox prefHeight="338.0" prefWidth="247.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="338.0" prefWidth="75.0">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/1.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" />
+                                       </VBox.margin></ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/2.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" />
+                                       </VBox.margin></ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/3.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" />
+                                       </VBox.margin></ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/4.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" />
+                                       </VBox.margin></ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/5.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin></ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="338.0" prefWidth="123.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#openHome" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Home">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#openClient" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Clients">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+
+                                    <Button mnemonicParsing="false" onAction="#openCards" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Cards">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+
+                                       <Button mnemonicParsing="false" onAction="#openTransaction" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Transaction">
+                                          <cursor>
+                                             <Cursor fx:constant="HAND" />
+                                          </cursor>
+                                       </Button>
+
+                                    <Button mnemonicParsing="false" onAction="#exitApplication" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Exit">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+
+                                 </children></VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="600.0" prefWidth="635.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="24.0" prefWidth="554.0" style="-fx-background-color: #cdcdcd;">
+                     <children>
+                        <Label text="B A N K ' S    R E P O R T S" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="55.0" prefWidth="554.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="634.0" style="-fx-background-color: #cdcdcd;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <Button maxHeight="75.0" maxWidth="200.0" mnemonicParsing="false" onAction="#openA" prefHeight="75.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases per&#10;Customer" textAlignment="CENTER" textFill="#305684" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="73.0" maxWidth="170.0" mnemonicParsing="false" onAction="#openB" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Spent per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <Button contentDisplay="CENTER" maxHeight="73.0" maxWidth="164.0" mnemonicParsing="false" onAction="#openC" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Cards per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="74.0" maxWidth="157.0" mnemonicParsing="false" onAction="#openD" prefHeight="74.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases by&#10;Facilitator" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="393.0" prefWidth="635.0" style="-fx-background-color: fff;">
+                     <children>
+                        <ImageView fitHeight="241.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/welcome.png" />
+                           </image>
+                        </ImageView>
+                     </children></VBox>
+                  <HBox prefHeight="62.0" prefWidth="635.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="122.0" prefWidth="149.0" style="-fx-background-color: #000;">
+                           <children>
+                              <ImageView fitHeight="122.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/elektro.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="122.0" prefWidth="486.0" style="-fx-background-color: #000;">
+                           <children>
+                              <Label text="POWERED WITH ELEKTRO TECHNOLOGY" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

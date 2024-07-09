@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.TransactionController">
+   <children>
+      <HBox prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <VBox prefHeight="500.0" prefWidth="267.0" style="-fx-background-color: #305684;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="164.0" prefWidth="250.0">
+                     <children>
+                        <ImageView fitHeight="133.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="338.0" prefWidth="250.0">
+                     <children>
+                        <HBox prefHeight="338.0" prefWidth="247.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="338.0" prefWidth="75.0">
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/1.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" />
+                                       </VBox.margin></ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/2.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" />
+                                       </VBox.margin></ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/3.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" />
+                                       </VBox.margin></ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/4.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" />
+                                       </VBox.margin></ImageView>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/5.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin></ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="338.0" prefWidth="123.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#openHome" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Home">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#openClient" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Clients">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+
+                                    <Button mnemonicParsing="false" onAction="#openCards" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Cards">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+
+                                    <Button mnemonicParsing="false" onAction="#openTransaction" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Transaction">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+
+                                    <Button mnemonicParsing="false" onAction="#exitApplication" style="-fx-background-color: transparent;-fx-text-fill: #fff;-fx-font-size: 16px" text="Exit">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+
+                                 </children></VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="600.0" prefWidth="634.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="24.0" prefWidth="554.0" style="-fx-background-color: #cdcdcd;">
+                     <children>
+                        <Label text="B A N K ' S    R E P O R T S" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="55.0" prefWidth="554.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="69.0" prefWidth="554.0" style="-fx-background-color: #cdcdcd;">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <Button maxHeight="75.0" maxWidth="200.0" mnemonicParsing="false" onAction="#openA" prefHeight="75.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases per&#10;Customer" textAlignment="CENTER" textFill="#305684" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="73.0" maxWidth="170.0" mnemonicParsing="false" onAction="#openB" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Spent per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <Button contentDisplay="CENTER" maxHeight="73.0" maxWidth="164.0" mnemonicParsing="false" onAction="#openC" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Cards per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="74.0" maxWidth="157.0" mnemonicParsing="false" onAction="#openD" prefHeight="74.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #305684; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases by&#10;Facilitator" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="237.0" prefWidth="554.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="38.0" prefWidth="554.0">
+                           <children>
+                              <Label text="Transactions section">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="223.0" prefWidth="554.0">
+                           <children>
+                              <VBox prefHeight="252.0" prefWidth="554.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="322.0" prefWidth="554.0">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" prefHeight="220.0" prefWidth="173.0">
+                                             <children>
+                                                <Label text="Add new transaction">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin></Label>
+                                                <TextField fx:id="clientIdI" maxWidth="75.0" promptText="Client's ID">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <TextField fx:id="cardIdI" maxWidth="75.0" promptText="Card's ID">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <DatePicker fx:id="transactionDate" maxWidth="125.0" promptText="Date">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></DatePicker>
+                                                <TextField fx:id="descriptionI" maxWidth="174.0" prefHeight="25.0" prefWidth="174.0" promptText="Description">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <TextField fx:id="amountI" maxWidth="125.0" promptText="Amount">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <Button mnemonicParsing="false" onAction="#insert" text="Add" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="238.0" prefWidth="197.0">
+                                             <children>
+                                                <Label text="Update client's transaction">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <TextField fx:id="transactionIdU" maxWidth="93.0" prefHeight="25.0" prefWidth="93.0" promptText="Transaction ID">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <Label text="Select info to change">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <ChoiceBox fx:id="transactionUpdateChoice" prefWidth="150.0">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </ChoiceBox>
+                                                <TextField fx:id="updateField" maxWidth="151.0" prefHeight="25.0" prefWidth="151.0" promptText="Info to change">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <Button mnemonicParsing="false" onAction="#update" text="Change" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="157.0" prefWidth="157.0">
+                                             <children>
+                                                <Label text="Delete transaction">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label text="Select transaction ID">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <TextField fx:id="transactionIdD" maxWidth="93.0" prefHeight="25.0" prefWidth="93.0" promptText="Transaction ID">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <Button mnemonicParsing="false" onAction="#delete" text="Delete">
+                                                   <VBox.margin>
+                                                      <Insets bottom="15.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                                <Label text="show transactions" />
+                                                <Button mnemonicParsing="false" onAction="#show" text="Show" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children></VBox>
+                  <VBox prefHeight="269.0" prefWidth="634.0">
+                     <children>
+                        <ScrollPane prefHeight="252.0" prefWidth="626.0">
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="10.0" />
+                           </VBox.margin>
+                           <content>
+                              <TableView fx:id="transactionsTableView" prefHeight="249.0" prefWidth="621.0">
+                                <columns>
+                                  <TableColumn fx:id="transactionsTableViewId" prefWidth="31.0" text="#" />
+                                  <TableColumn fx:id="transactionsTableViewPurchaseDate" prefWidth="115.0" text="Purchase date" />
+                                    <TableColumn fx:id="transactionsTableViewTotalAmount" prefWidth="76.0" text="Total" />
+                                    <TableColumn fx:id="transactionsTableViewDescription" prefWidth="279.0" text="Description" />
+                                    <TableColumn fx:id="transactionsTableViewClientId" prefWidth="68.0" text="Client" />
+                                    <TableColumn fx:id="transactionsTableViewCardId" prefWidth="51.0" text="Card" />
+                                </columns>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

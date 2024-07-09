@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alexsv.parcialfinal.ReportBController">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="900.0">
+            <children>
+            <HBox style="-fx-background-color: #305684;">
+               <children>
+                  <HBox style="-fx-background-color: #305684;">
+                     <children>
+                        <VBox prefHeight="125.0" prefWidth="125.0">
+                           <children>
+                              <ImageView fitHeight="125.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="126.0" prefWidth="743.0">
+                      <children>
+                          <HBox alignment="CENTER" prefHeight="126.0" prefWidth="645.0" style="-fx-background-color: #305684;">
+                              <children>
+                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                      <children>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="74.0" maxWidth="157.0" mnemonicParsing="false" onAction="#openHome" prefHeight="74.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #fff; -fx-font-size: 12; -fx-background-radius: 13;" text="Home" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                              <cursor>
+                                                  <Cursor fx:constant="HAND" />
+                                              </cursor>
+                                              <font>
+                                                  <Font size="14.0" />
+                                              </font>
+                                          </Button>
+                                      </children>
+                                  </VBox>
+                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                      <children>
+                                          <Button maxHeight="75.0" maxWidth="200.0" mnemonicParsing="false" onAction="#openA" prefHeight="75.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #fff; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                              <cursor>
+                                                  <Cursor fx:constant="HAND" />
+                                              </cursor>
+                                              <font>
+                                                  <Font name="System Bold" size="18.0" />
+                                              </font>
+                                          </Button>
+                                      </children>
+                                  </VBox>
+                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                      <children>
+                                          <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="73.0" maxWidth="170.0" mnemonicParsing="false" onAction="#openB" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #fff; -fx-font-size: 12; -fx-background-radius: 13;" text="Spent per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                              <cursor>
+                                                  <Cursor fx:constant="HAND" />
+                                              </cursor>
+                                              <font>
+                                                  <Font size="14.0" />
+                                              </font>
+                                          </Button>
+                                      </children>
+                                  </VBox>
+                                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="125.0">
+                                      <children>
+                                          <Button contentDisplay="CENTER" maxHeight="73.0" maxWidth="164.0" mnemonicParsing="false" onAction="#openC" prefHeight="73.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #fff; -fx-font-size: 12; -fx-background-radius: 13;" text="Cards per&#10;Customer" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                              <cursor>
+                                                  <Cursor fx:constant="HAND" />
+                                              </cursor>
+                                              <font>
+                                                  <Font size="14.0" />
+                                              </font>
+                                          </Button>
+                                      </children>
+                                  </VBox>
+                                  <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="74.0" maxWidth="157.0" mnemonicParsing="false" onAction="#openD" prefHeight="74.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-padding: 10,10,10,10; -fx-text-fill: #fff; -fx-font-size: 12; -fx-background-radius: 13;" text="Purchases by&#10;Facilitator" textAlignment="CENTER" textFill="WHITE" underline="true">
+                                      <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                      </cursor>
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Button>
+                              </children>
+                          </HBox>
+                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+            </HBox>
+                <VBox alignment="CENTER" prefHeight="74.0" prefWidth="800.0">
+                    <children>
+                        <Label text="Money spent section">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Money spent by a customer in a month">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox prefHeight="402.0" prefWidth="900.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="69.0" prefWidth="800.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
+                           <children>
+                              <Label text="Client's ID" />
+                              <TextField fx:id="clientIDMoneySpentTextField" maxWidth="150.0" promptText="ID here" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
+                           <children>
+                              <Label text="Month" />
+                              <TextField fx:id="monthChoice" maxWidth="-Infinity" prefHeight="24.0" prefWidth="196.0" promptText="The number of the month" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="267.3">
+                           <children>
+                              <Label text="Year" />
+                              <TextField fx:id="yearChoice" maxWidth="-Infinity" prefHeight="24.0" prefWidth="161.0" promptText="Year" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="33.0" prefWidth="800.0">
+                     <children>
+                        <Button fx:id="searchMoneySpentButtom" mnemonicParsing="false" onAction="#reportB" text="Search" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="284.0" prefWidth="900.0">
+                     <children>
+                        <TableView fx:id="MoneySpentTable" prefHeight="279.0" prefWidth="800.0">
+                          <columns>
+                            <TableColumn fx:id="clientsNameFromMoneySpentTableColumn" prefWidth="351.2000068426132" text="Client's name" />
+                              <TableColumn fx:id="totalSpentFromMoneySpentTableColumn" prefWidth="218.0" text="Total amount spent" />
+                          </columns>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</Pane>
