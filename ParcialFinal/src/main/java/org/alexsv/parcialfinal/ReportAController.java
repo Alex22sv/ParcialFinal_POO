@@ -47,7 +47,7 @@ public class ReportAController extends Controller { // 00024123 class of the rep
                 while (rs.next()) { //00041923 continues while the table has more data
                     ReportA reportA = new ReportA(rs.getDate("purchaseDate"), rs.getDouble("totalAmount"), rs.getString("description"), Utilities.censorCardNumber(rs.getString("cardNumber"))); // 00024123 Create a new report a
                     purchasesMadeTable.getItems().add(reportA); // 00024123 Add the report A to the table
-                    data.add("Transaction Id: " + rs.getString("transactionId") + " | Client Id: " + rs.getString("clientId") + " | Name: " + rs.getString("name") + " | Date: " + rs.getString("purchaseDate") + " | Transaction amount: " + rs.getString("totalAmount") + "\n"); //00041923 Add to the collection the information of the table with respect to the query
+                    data.add("Transaction Id: " + rs.getString("transactionId") + " Client Id: " + rs.getString("clientId") + " Name: " + rs.getString("name") + " Date: " + rs.getString("purchaseDate") + " Transaction amount: " + rs.getString("totalAmount") + "\n"); //00041923 Add to the collection the information of the table with respect to the query
                 }
                 String infoToWrite = String.join("\n", data); // 00041923 join the data collected in a whole String variable
                 if (!infoToWrite.isEmpty()) { //00041923 in case there are information to write in a file

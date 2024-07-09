@@ -43,7 +43,7 @@ public class ReportBController extends Controller { // 00024123 class of the rep
                 while (rs.next()) { // 00041923 continues while the table have more data
                     ReportB reportB = new ReportB(rs.getString("name"), "$" + rs.getString("total_t")); // 00024123 Create a new report B
                     MoneySpentTable.getItems().add(reportB); // 00024123 Add the report B to the table
-                    data.add("Client id: " + rs.getString("clientId") + "Month: " + rs.getString("monthT") + "Year: " + rs.getString("yearT") + "Total: " + rs.getString("total_t") + "\n"); // 00041923 add to the collection the information of the table with respect to the query
+                    data.add("Client id: " + rs.getString("clientId") + " Month: " + rs.getString("monthT") + " Year: " + rs.getString("yearT") + " Total: " + rs.getString("total_t") + "\n"); // 00041923 add to the collection the information of the table with respect to the query
                 }
                 String infoToWrite = String.join("\n", data); // 00041923 join the data collected in a whole String variable
                 if (!infoToWrite.isEmpty()) { //00041923 in case there are information to write in a file
