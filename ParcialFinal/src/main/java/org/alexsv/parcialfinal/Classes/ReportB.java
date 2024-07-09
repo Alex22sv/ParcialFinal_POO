@@ -1,4 +1,4 @@
-package org.alexsv.parcialfinal;
+package org.alexsv.parcialfinal.Classes;
 
 public class ReportB { //00016023 - Defines the public class ReportB
     private String clientName; //00016023 - Declares a private variable of type String for the client name

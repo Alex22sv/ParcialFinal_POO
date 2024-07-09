@@ -117,4 +117,12 @@ public class Controller {//00016023 - General controller who generates the navig
         alert.setHeaderText("There is nothing to show and save in a file"); //0041923 set the text on alert
         alert.showAndWait(); //00041923 displays the alert
     }
+
+    @FXML //00041923 Define the function as an option in fxml file
+    public void idNotFound(){ //00041923 this method displays an alert when the id is not found
+        Alert alert = new Alert(Alert.AlertType.ERROR); // create a new alert
+        alert.setTitle("Error"); //00041923 set the alert title
+        alert.setHeaderText("Id not found, verify the database"); //00041923 set the text on alert
+        alert.showAndWait(); //00041923 displays the alert
+    }
 }

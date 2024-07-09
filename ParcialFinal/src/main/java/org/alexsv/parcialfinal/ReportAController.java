@@ -4,11 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.alexsv.parcialfinal.Classes.DatabaseConnection;
+import org.alexsv.parcialfinal.Classes.ReportA;
 import org.alexsv.parcialfinal.Classes.Utilities;
 
 import java.io.IOException;
 import java.sql.*;
-import java.text.ParseException;
 import java.util.ArrayList;
 
 public class ReportAController extends Controller { // 00024123 class of the report A controller that extends from father Controller

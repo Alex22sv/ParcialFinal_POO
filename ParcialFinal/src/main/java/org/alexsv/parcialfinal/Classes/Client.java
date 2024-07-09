@@ -1,4 +1,4 @@
-package org.alexsv.parcialfinal;
+package org.alexsv.parcialfinal.Classes;
 
 public class Client { //Definition of the client class
     private Integer clientId; // 00067323 Declaring private Integer for client's ID

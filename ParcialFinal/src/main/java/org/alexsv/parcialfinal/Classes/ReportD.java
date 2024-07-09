@@ -1,4 +1,4 @@
-package org.alexsv.parcialfinal;
+package org.alexsv.parcialfinal.Classes;
 
 public class ReportD { //00016023 - Defines the public class ReportD
     private Integer transactionId; //00016023 - Declares a private variable of type Integer for the transaction ID

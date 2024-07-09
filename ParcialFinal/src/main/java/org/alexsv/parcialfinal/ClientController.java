@@ -3,11 +3,11 @@ package org.alexsv.parcialfinal;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
+import org.alexsv.parcialfinal.Classes.Client;
 import org.alexsv.parcialfinal.Classes.DatabaseConnection;
+import org.alexsv.parcialfinal.Classes.Utilities;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 public class ClientController extends Controller { //00041923 class of the client-screen controller that extends from father Controller
     //every variable has an identifier at the end (I insert, D delete, U update)
@@ -95,14 +95,18 @@ public class ClientController extends Controller { //00041923 class of the clien
                 PreparedStatement ps = db.prepareStatement("UPDATE Client SET " + column + " = ? WHERE clientId = ?");  // 00024123 Create a prepared statement to update the client information
                 ps.setString(1, updateField.getText()); //00041923 put the parameters from the prepareStatement in first index, in this case is the information to update
                 ps.setInt(2, Integer.parseInt(idClientU.getText())); //00041923 put the parameters from the prepareStatement in second index, in this case is the id to search
-                ps.executeUpdate(); //00041923 execute the previous query
-                clientUpdateChoice.setValue(null); // 00024123 Update the client's update choice
-                updateField.setText(""); // 00024123 Clear the client's update field
-                idClientU.setText(""); // 00024123 Clear the client's ID input
-                if (!clientsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
-                    show(); // 00024123 Update the table with the new changes
+                if (Utilities.exists(Integer.parseInt(idClientU.getText()))){ //00041923 in case exists the id
+                    ps.executeUpdate(); //00041923 execute the previous query
+                    clientUpdateChoice.setValue(null); // 00024123 Update the client's update choice
+                    updateField.setText(""); // 00024123 Clear the client's update field
+                    idClientU.setText(""); // 00024123 Clear the client's ID input
+                    if (!clientsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
+                        show(); // 00024123 Update the table with the new changes
+                    }
+                    successfullOperation(); // 00024123 Display successfull operation alert
+                }else { //00041923 in case the id not exists
+                    idNotFound(); //00041923 displays an alert
                 }
-                successfullOperation(); // 00024123 Display successfull operation alert
                 db.close(); // 00041923 Close de database connection
             } else { // 00024123 The user forgot to fulfill all fields
                 emptyOperation(); // 00024123 Display an alert to let the user know they are missing empty fields
@@ -120,12 +124,16 @@ public class ClientController extends Controller { //00041923 class of the clien
                 Connection db = DatabaseConnection.getConnection(); // 00041923 make the connection with the database
                 PreparedStatement preparedStatement = db.prepareStatement("DELETE FROM Client WHERE clientId = ?"); // 00024123 Create a prepared statement to delete the client
                 preparedStatement.setInt(1, Integer.valueOf(idClientD.getText())); // 00024123 Put the parameter (client ID)
-                preparedStatement.executeUpdate(); // 00024123 execute the previous query
-                idClientD.setText(""); // 00024123 Clear the client's ID inout
-                if (!clientsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
-                    show(); // 00024123 Update the table with the new changes
+                if (Utilities.exists(Integer.parseInt(idClientD.getText()))) { //00041923 in case the id exists
+                    preparedStatement.executeUpdate(); // 00024123 execute the previous query
+                    idClientD.setText(""); // 00024123 Clear the client's ID inout
+                    if (!clientsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
+                        show(); // 00024123 Update the table with the new changes
+                    }
+                    successfullOperation(); // 00024123 Display successfull operation alert
+                }else { //00041923 in case the id is not found
+                    idNotFound(); //00041923 displays an alert
                 }
-                successfullOperation(); // 00024123 Display successfull operation alert
                 db.close(); // 00041923 Close de database connection
             } else { // 00024123 The user forgot to fulfill all fields
                 emptyOperation(); // 00024123 Display an alert to let the user know they are missing empty fields

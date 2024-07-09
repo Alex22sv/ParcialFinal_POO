@@ -1,4 +1,4 @@
-package org.alexsv.parcialfinal;
+package org.alexsv.parcialfinal.Classes;
 import java.util.Date;
 
 public class ReportA { //00016023 - Defines the public class ReportA

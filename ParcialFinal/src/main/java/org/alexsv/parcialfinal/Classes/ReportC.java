@@ -1,4 +1,4 @@
-package org.alexsv.parcialfinal;
+package org.alexsv.parcialfinal.Classes;
 
 public class ReportC { //00016023 - Defines the public class ReportC
     private String creditCard; //00016023 - Declares a private variable of type String for the credit card

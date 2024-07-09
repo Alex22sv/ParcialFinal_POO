@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.alexsv.parcialfinal.Classes.DatabaseConnection;
+import org.alexsv.parcialfinal.Classes.ReportB;
 import org.alexsv.parcialfinal.Classes.Utilities;
 
 import java.io.IOException;

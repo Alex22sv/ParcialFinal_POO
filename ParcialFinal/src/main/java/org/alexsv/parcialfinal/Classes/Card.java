@@ -1,4 +1,4 @@
-package org.alexsv.parcialfinal;
+package org.alexsv.parcialfinal.Classes;
 public class Card { //00067323 Definition of the card class
     private Integer cardId; // 00067323 Declaring private Integer for card's ID
     private String cardNumber; // 00067323 Declaring private String for card number

@@ -1,4 +1,4 @@
-package org.alexsv.parcialfinal;
+package org.alexsv.parcialfinal.Classes;
 public class Transaction { // 00067323 Definition of the Transaction class
     private Integer transactionId; // 00067323 Declaring private Integer for transaction's ID
     private String purchaseDate; // 00067323 Declaring private String for purchase date

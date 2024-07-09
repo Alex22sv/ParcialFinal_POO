@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.alexsv.parcialfinal.Classes.DatabaseConnection;
+import org.alexsv.parcialfinal.Classes.Transaction;
 import org.alexsv.parcialfinal.Classes.Utilities;
 
 import java.sql.*;
@@ -110,14 +111,18 @@ public class TransactionController extends Controller{ //00024123 class of the t
                 PreparedStatement ps = db.prepareStatement("UPDATE Transaction SET "+ column + " = ? WHERE transactionId = ?"); // 00024123 Create a prepared statement to update the transaction information
                 ps.setString(1, updateField.getText()); // 00024123 Put the parameter (Update field)
                 ps.setInt(2, Integer.parseInt(transactionIdU.getText())); // 00024123 Put the parameter (transaction ID)
-                ps.executeUpdate(); // 00024123 execute the previous query
-                transactionUpdateChoice.setValue(null); // 00024123 Clear the transaction update choice
-                updateField.setText(""); // 00024123 Clear the update field
-                transactionIdU.setText(""); // 00024123 Clear the transaction ID input
-                if (!transactionsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
-                    show(); // 00024123 Update the table with the new changes
+                if (Utilities.exists(Integer.parseInt(transactionIdU.getText()))) { //00041923 in case exists the id
+                    ps.executeUpdate(); // 00024123 execute the previous query
+                    transactionUpdateChoice.setValue(null); // 00024123 Clear the transaction update choice
+                    updateField.setText(""); // 00024123 Clear the update field
+                    transactionIdU.setText(""); // 00024123 Clear the transaction ID input
+                    if (!transactionsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
+                        show(); // 00024123 Update the table with the new changes
+                    }
+                    successfullOperation(); // 00024123 Display successfull operation alert
+                }else {
+                    idNotFound(); //00041923 displays an alert
                 }
-                successfullOperation(); // 00024123 Display successfull operation alert
                 db.close(); // 00041923 Close de database connection
             } else { // 00024123 The user forgot to fulfill all fields
                 emptyOperation(); // 00024123 Display an alert to let the user know they are missing empty fields
@@ -135,12 +140,16 @@ public class TransactionController extends Controller{ //00024123 class of the t
                 Connection db = DatabaseConnection.getConnection(); // 00024123 make the connection with the database
                 PreparedStatement preparedStatement = db.prepareStatement("DELETE FROM Transaction WHERE transactionId = ?"); // 00024123 Create a prepared statement to delete the transaction
                 preparedStatement.setInt(1, Integer.valueOf(transactionIdD.getText())); // 00024123 Put the parameter (transaction ID)
-                preparedStatement.executeUpdate(); // 00024123 execute the previous query
-                transactionIdD.setText(""); // 00024123 Clear the transaction ID input
-                if (!transactionsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
-                    show(); // 00024123 Update the table with the new changes
+                if (Utilities.exists(Integer.parseInt(transactionIdD.getText()))) { //00041923 in case exists the id
+                    preparedStatement.executeUpdate(); // 00024123 execute the previous query
+                    transactionIdD.setText(""); // 00024123 Clear the transaction ID input
+                    if (!transactionsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
+                        show(); // 00024123 Update the table with the new changes
+                    }
+                    successfullOperation(); // 00024123 Display successfull operation alert
+                }else {
+                    idNotFound(); //00041923 displays an alert
                 }
-                successfullOperation(); // 00024123 Display successfull operation alert
                 db.close(); // 00041923 Close de database connection
             } else { // 00024123 The user forgot to fulfill all fields
                 emptyOperation(); // 00024123 Display an alert to let the user know they are missing empty fields

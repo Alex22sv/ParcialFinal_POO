@@ -3,13 +3,12 @@ package org.alexsv.parcialfinal;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
+import org.alexsv.parcialfinal.Classes.Card;
 import org.alexsv.parcialfinal.Classes.DatabaseConnection;
 import org.alexsv.parcialfinal.Classes.Utilities;
 
 import java.sql.*;
 import java.time.ZoneId;
-import java.util.ArrayList;
 import java.util.Date;
 
 public class CardController extends Controller { //00016023 class of the card-screen controller that extends from father Controller
@@ -118,14 +117,18 @@ public class CardController extends Controller { //00016023 class of the card-sc
                 PreparedStatement ps = db.prepareStatement("UPDATE Card SET " + column + " = ? WHERE cardId = ?"); // 00024123 Create a prepared statement to update the card information
                 ps.setString(1, updateField.getText()); //00016023 put the parameters from the prepareStatement in first index, in this case is the information to update
                 ps.setInt(2, Integer.parseInt(idCardU.getText())); //00016023 put the parameters from the prepareStatement in second index, in this case is the id to search
-                ps.executeUpdate(); //00016023 execute the previous query
-                cardUpdateChoice.setValue(null); // 00024123 Update the card's update choice
-                updateField.setText(""); // 00024123 Update the card's update field
-                idCardU.setText(""); // 00024123 Update the card's ID input
-                if (!cardsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
-                    show(); // 00024123 Update the table with the new changes
+                if (Utilities.exists(Integer.parseInt(idCardU.getText()))) { //00041923 in case exists the id
+                    ps.executeUpdate(); //00016023 execute the previous query
+                    cardUpdateChoice.setValue(null); // 00024123 Update the card's update choice
+                    updateField.setText(""); // 00024123 Update the card's update field
+                    idCardU.setText(""); // 00024123 Update the card's ID input
+                    if (!cardsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
+                        show(); // 00024123 Update the table with the new changes
+                    }
+                    successfullOperation(); // 00024123 Display successfull operation alert
+                }else {
+                    idNotFound(); //00041923 displays an alert
                 }
-                successfullOperation(); // 00024123 Display successfull operation alert
                 db.close(); // 00041923 Close de database connection
             } else { // 00024123 The user forgot to fulfill all fields
                 emptyOperation(); // 00024123 Display an alert to let the user know they are missing empty fields
@@ -141,14 +144,18 @@ public class CardController extends Controller { //00016023 class of the card-sc
         try { //00041923 tries the code below
             if (!idCardD.getText().equals("")) { // 00024123 Check if user didn't miss any fields
                 Connection db = DatabaseConnection.getConnection(); // 00016023 make the connection with the database
-                PreparedStatement preparedStatement = db.prepareStatement("DELETE FROM Transaction WHERE cardId = ?"); // 00024123 Create a prepared statement to delete the card
+                PreparedStatement preparedStatement = db.prepareStatement("DELETE FROM Card WHERE cardId = ?"); // 00024123 Create a prepared statement to delete the card
                 preparedStatement.setInt(1, Integer.valueOf(idCardD.getText())); // 00024123 Put the parameter (card ID)
-                preparedStatement.executeUpdate(); // 00024123 execute the previous query
-                idCardD.setText(""); // 00024123 Clear the card's ID input
-                if (!cardsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
-                    show(); // 00024123 Update the table with the new changes
+                if (Utilities.exists(Integer.parseInt(idCardD.getText()))) { //00041923 in case exists the id
+                    preparedStatement.executeUpdate(); // 00024123 execute the previous query
+                    idCardD.setText(""); // 00024123 Clear the card's ID input
+                    if (!cardsTableView.getItems().isEmpty()) { // 00024123 Check if the table view has elements
+                        show(); // 00024123 Update the table with the new changes
+                    }
+                    successfullOperation(); // 00024123 Display successfull operation alert
+                }else {
+                    idNotFound(); //00041923 displays an alert
                 }
-                successfullOperation(); // 00024123 Display successfull operation alert
                 db.close(); // 00041923 Close de database connection
             } else { // 00024123 The user forgot to fulfill all fields
                 emptyOperation(); // 00024123 Display an alert to let the user know they are missing empty fields
