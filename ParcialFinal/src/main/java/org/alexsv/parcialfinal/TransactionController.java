@@ -112,9 +112,10 @@ public class TransactionController extends Controller{
                         column = "cardId";
                         break;
                 }
-                PreparedStatement ps = db.prepareStatement("UPDATE Transaction SET " + column + " = ? WHERE transactionId = ?");
-                ps.setString(2, transactionIdU.getText());
-                //implementar la modificacion segun columna
+                PreparedStatement ps = db.prepareStatement("UPDATE Transaction SET "+ column + " = ? WHERE transactionId = ?");
+                ps.setString(1, updateField.getText()); //revisar esto por los tipos de datos ALEX
+                ps.setInt(2, Integer.parseInt(transactionIdU.getText()));
+                ps.executeUpdate();
                 transactionUpdateChoice.setValue(null);
                 updateField.setText("");
                 transactionIdU.setText("");
