@@ -134,7 +134,7 @@
                         <TableView fx:id="cardsAssociatedTable" prefHeight="277.0" prefWidth="800.0">
                           <columns>
                             <TableColumn fx:id="creditCardsFromCardsTableColumn" prefWidth="399.00002133846283" text="Credit cards" />
-                            <TableColumn fx:id="debitCardsFromCardsTableColumn" prefWidth="397.5999450683594" text="Debir cards" />
+                            <TableColumn fx:id="debitCardsFromCardsTableColumn" prefWidth="397.5999450683594" text="Debit cards" />
                           </columns>
                            <HBox.margin>
                               <Insets top="5.0" />
