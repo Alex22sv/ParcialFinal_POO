@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
     private static final String url = "jdbc:mysql://localhost:3306/BCN"; //00041923 get the URL connection to the database
-    private static final String user = "ae22mp"; //00041923 get the user
-    private static final String password = "Alex22sv"; //00041923 get the password
+    private static final String user = "root"; //00041923 get the user
+    private static final String password = "Ir@heta1708"; //00041923 get the password
     //change the password for use it ↑
     public static Connection getConnection() throws SQLException{
         return DriverManager.getConnection(url,user,password); //00041923 return the connection with the database
