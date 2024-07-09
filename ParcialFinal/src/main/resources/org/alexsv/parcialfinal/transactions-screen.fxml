@@ -194,12 +194,30 @@
                                        <children>
                                           <VBox alignment="TOP_CENTER" prefHeight="220.0" prefWidth="173.0">
                                              <children>
-                                                <Label text="Add new transaction" />
-                                                <TextField fx:id="clientIdI" maxWidth="75.0" promptText="Client's ID" />
-                                                <TextField fx:id="cardIdI" maxWidth="75.0" promptText="Card's ID" />
-                                                <DatePicker fx:id="transactionDate" maxWidth="125.0" promptText="Date" />
-                                                <TextField fx:id="descriptionI" maxWidth="125.0" promptText="Description" />
-                                                <TextField fx:id="amountI" maxWidth="125.0" promptText="Amount" />
+                                                <Label text="Add new transaction">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin></Label>
+                                                <TextField fx:id="clientIdI" maxWidth="75.0" promptText="Client's ID">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <TextField fx:id="cardIdI" maxWidth="75.0" promptText="Card's ID">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <DatePicker fx:id="transactionDate" maxWidth="125.0" promptText="Date">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></DatePicker>
+                                                <TextField fx:id="descriptionI" maxWidth="174.0" prefHeight="25.0" prefWidth="174.0" promptText="Description">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
+                                                <TextField fx:id="amountI" maxWidth="125.0" promptText="Amount">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin></TextField>
                                                 <Button mnemonicParsing="false" onAction="#insert" text="Add" />
                                              </children>
                                           </VBox>
@@ -224,7 +242,7 @@
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
                                                 </ChoiceBox>
-                                                <TextField fx:id="updateField" maxWidth="92.0" prefHeight="25.0" prefWidth="92.0" promptText="Info to change">
+                                                <TextField fx:id="updateField" maxWidth="151.0" prefHeight="25.0" prefWidth="151.0" promptText="Info to change">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" />
                                                    </VBox.margin>
@@ -255,7 +273,7 @@
                                                    </VBox.margin>
                                                 </Button>
                                                 <Label text="show transactions" />
-                                                <Button mnemonicParsing="false" text="Show" onAction="#show"/>
+                                                <Button mnemonicParsing="false" onAction="#show" text="Show" />
                                              </children>
                                           </VBox>
                                        </children>
